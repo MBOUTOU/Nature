@@ -1,0 +1,1187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* le debut du code dans la patie principale */
+
+.principale{
+    height: auto;
+    padding: 10px;
+}
+
+.header-contenu{
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.425)),url(image/fond/principale-img.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 30px 4%;
+  min-height: 100vh;
+  border-radius: 20px;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.nav-logo{
+    opacity: 0;
+}
+
+.nav-logo img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  transition: all 0.3s;
+}
+
+.nav-links .les-liens{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.nav-links .les-liens li a{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.nav-links .les-liens li a::before{
+   position: absolute;
+   content: "";
+   height: 2px;
+   width: 0%;
+   background-color: white;
+   left: 0;
+   bottom: -5px;
+   transition: 0.3s width; 
+}
+
+.nav-links .les-liens li a:hover::before{
+  width: 100%;
+}
+
+.nav-links .subcribs{
+   padding: 10px 15px;
+   border-radius:  10px;
+   font-weight: bold;
+   font-size: 22px;
+   color:  white;
+   background-color: green;
+   transition: 0.6s background;
+}
+
+.nav-links .subcribs:hover{
+    background-color: black;
+    color: white;
+}
+
+/* la partie du menu deroulant */
+.menu-navigation{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: transparent;
+    top: 60px;
+    right: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.L1{
+   transform: translateY(-10px);
+}
+
+.L3{
+   transform: translateY(10px);
+}
+
+.L2{
+
+}
+
+
+/* la partie du texte principale dans le header */
+.text-principale-information{
+    max-width: 700px;
+}
+
+.text-principale-information h1{
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 80px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.img-rotation{
+   width: 50px;
+   height: 50px;
+   object-fit: cover;
+}
+
+.text-principale-information a{
+    background-color:  green;
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.text-principale-information a:hover{
+  background-color: black;
+  color: white;
+}
+
+
+/* la partie du block flottant avec les images qui defile*/
+.block-principale-flottant{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 100px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    padding: 5px 0px 0px 5px;
+
+}
+
+.block-principale-flottant::before, 
+.block-principale-flottant::after{
+   position: absolute;
+  content: "";
+  width: 24px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle 24px at top left, 
+  #00000000 98%,
+  white) top left;
+}
+
+.block-principale-flottant::before{
+    left: -24px;
+    bottom: 0;
+}
+
+.block-principale-flottant::after{
+    right: 0px;
+    top: -24px;
+}
+
+
+.flottant-contenu{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px 0;
+    overflow: hidden;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #33333371;
+}
+
+.number{
+    font-size: 40px;
+     color: greenyellow;
+}
+
+.flottant-contenu p{
+    color: black;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* la grille des images de deuxieme section */
+.grid-image-contente{
+    padding: 30px 3%;
+}
+
+.grid-contenu{
+    gap: 10px;
+    padding: 15px;
+    display: grid;
+    max-height: 120vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "grid1 grid1 grid2 grid3"
+    "grid6 grid6 grid4 grid5"
+    ;
+
+}
+
+.griden-img{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.griden-video{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.griden-img img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.griden-video video{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.grid-prix{
+    position: absolute;
+    bottom: 10px;
+}
+
+.grid-prix p{
+    font-size: 20px;
+    color:  rgb(71, 71, 71);
+    font-weight: bold;
+}
+
+
+.flotte-grid-block{
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    border-top-left-radius: 20px;
+    padding: 5px 0 0 5px;
+}
+
+.flotte-grid-block::before,
+.flotte-grid-block::after{
+   position: absolute;
+   height: 23px;
+   aspect-ratio: 1;
+   content: "";
+   background: radial-gradient(circle 24px at top left, 
+  #00000000 98%,
+  white) top left;
+}
+
+.flotte-grid-block::before{
+   position: absolute;
+   content: "";
+   left: -19px;
+   bottom: 0px;
+}
+
+.flotte-grid-block::after{
+   position: absolute;
+   content: "";
+   right: 0px;
+   top: -18px;
+}
+
+.flotte-grid-block div{
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flotte-grid-block div i{
+    color: transparent;
+    font-size: 30px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: blue;
+
+}
+
+.grid1{
+  grid-area: grid1;
+  background-image: url(image/cart\ \(3\).jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid6{
+  grid-area: grid6;
+  background-image: url(image/cart\ \(2\).jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid2{
+  grid-area: grid2;
+  background-color:  rgba(3, 92, 16, 0.589);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10px;
+}
+
+.grid2 p{
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    font-weight: 600;
+}
+
+
+.grid3{
+  grid-area: grid3;
+  background-image: url(image/sup\ \(5\).jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid4{
+  grid-area: grid4;
+  background-image: url(image/sup\ \(2\).jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.grid5{
+    /* ici il ya la video qui est presente */
+  grid-area: grid5;
+}
+
+
+
+
+
+/* la partie des images de la categories des produits */
+
+.categories-image{
+    height: auto;
+    padding: 100px 4% 50px 4%;
+}
+
+.texting-categories{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.texting-categories h2{
+    font-weight: bold;
+    color: goldenrod;
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.texting-categories p{
+      font-weight: bold;
+      color: goldenrod;
+      font-size: 25px;
+     font-family: "Montserrat", sans-serif;
+     font-optical-sizing: auto;
+
+}
+
+.span-100{
+   color: black;
+}
+
+/* la partie des textes de la categories des images*/
+
+.cont-galeries-image{
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.text-categorie-galerie{
+   height: 100%;
+   position: sticky;
+   top: 20px;
+   padding-inline: 10px;
+}
+
+
+
+.btn-cat{
+   border: none;
+   background-color: transparent;
+   font-size: 20px;
+   margin-bottom: 20px;
+   cursor: pointer;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.filter{
+   line-height: 30px;
+}
+
+.cat-texte{
+  cursor: pointer;
+  transition: 0.5s;
+   border: none;
+   background-color: transparent;
+   font-size: 18px;
+   margin-bottom: 5px;
+   cursor: pointer;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.active{
+  color: rgba(0, 0, 255, 0.473);
+}
+
+
+/* pertie comment de la galerie des images */
+
+.moteur-image-categorie{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    padding-inline: 15px;
+    width: 100%;
+}
+
+.groy-categorie{
+    height: 300px;
+    width: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.groy-categorie img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* les images categorie */
+
+.Gommage{
+    background-image: url(image/gommage.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Crème{
+    background-image: url(image/creme.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.parfum{
+    background-image: url(image/parfum.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Poudre{
+    background-image: url(image/Poudre.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Savon{
+    background-image: url(image/savon.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.filtreure{
+    display: none;
+}
+
+
+.groy-sous-flottant{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    padding: 5px 0 0 5px;
+    bottom: 0;
+    right: 0;
+}
+
+.groy-sous-flottant::before,
+.groy-sous-flottant::after{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle 24px at top left, 
+      #00000000 98%,
+     white) top left;
+}
+
+.groy-sous-flottant::before{
+    position: absolute;
+    content: "";
+    left: -20px;
+    bottom: 0;
+}
+
+.groy-sous-flottant::after{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -20px;
+}
+
+.groy-sous-flottant div{
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groy-sous-flottant div i{
+    color: transparent;
+    font-size: 25px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: blue;
+}
+
+
+
+
+
+/*  la section contacter les expertes en beauter*/
+.grid-gallerie{
+    background-color: rgba(56, 161, 96, 0.37);
+    height: auto;
+    padding: 30px 4% 0 4%;
+    display: flex;
+    align-items: center;
+}
+
+.texte-contact h2 {
+   font-size: 50px;
+   color: goldenrod;
+   font-weight: bold;
+   margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.texte-contact{
+ padding-right: 100px;
+}
+
+.texte-contact p{
+   font-size: 19px;
+   margin-bottom: 50px;
+   line-height: 25px;
+}
+
+.texte-contact a{
+   padding: 10px 15px;
+   border-radius:  10px;
+   font-weight: bold;
+   font-size: 22px;
+   color:  white;
+   background-color: black;
+   transition: all 0.5s;
+}
+
+.texte-contact a:hover{
+     transform: scale(1.05);
+}
+
+.img-contact{
+    height: 100%;
+}
+
+.img-contact img{
+    width: 450px;
+    height: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* la partie des commentaires je vais mettre les commentaires qui slident*/
+
+.commentaire{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    flex-direction: column;
+
+}
+
+.texte-commentaire{
+    margin-bottom: 80px;
+}
+
+.texte-commentaire h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.box-commentaire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.card-commentaire{
+  padding: 20px 20px;
+  max-width: 300px;
+  background-color: rgba(56, 161, 96, 0.37);
+  border-radius: 20px;
+}
+
+.card-commentaire img{
+   width: 90px;
+   height: 90px;
+   object-fit: cover;
+   margin-bottom: 20px;
+   border-radius: 50%;
+}
+
+.card-commentaire h2{
+   color:  black;
+   margin-bottom: 20px;
+   text-transform: capitalize;
+}
+
+.card-commentaire p{
+  color: #333;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+
+
+
+@media (max-width: 1024px){
+    
+}
+
+
+@media (max-width: 750px){
+    
+.principale{
+    height: auto;
+    padding: 5px;
+}
+
+body.active{
+    background-color: #33333370;
+    overflow: hidden;
+}
+
+.header-contenu{
+  background: linear-gradient(rgba(0, 0, 0, 0.363),rgba(0, 0, 0, 0.322)),url(image/fond/principale-img.jpg);
+  background-position: top;
+  background-size: cover;
+  padding: 30px 4%;
+  border-radius: 20px;
+  min-height: 80vh;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.nav-logo img{
+    width: 55px;
+    height: 55px;
+}
+
+.nav-links{
+ justify-content: center;
+ flex-direction: column;
+ gap: 40px;
+ visibility: visible;
+ position:fixed;
+ background-color: #f1f1f1;
+ top: 0;
+ left: 0;
+ z-index: 100;
+ width: 100%;
+ min-height: 50vh;
+ transition: transform 0.3s;
+ transform: translateY();
+ border-bottom-right-radius: 30px;
+ border-bottom-left-radius: 30px;
+ transform: translateY(-500px);
+}
+
+.nav-links.active{
+ transform: translateY(0);
+}
+
+
+.nav-links .les-liens{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.nav-links .les-liens li a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+
+
+/* la partie du menu deroulant */
+.menu-navigation{
+    width: 25px;
+    height: 25px;
+    top: 40px;
+    right: 35px;
+    visibility: visible;
+}
+
+.line{
+    position: absolute;
+    transition: transform 0.3s ease-in-out, 
+    opacity 0.2s ease-out;
+}
+
+.L1{
+   transform: translateY(-10px);
+}
+
+.L3{
+   transform: translateY(10px);
+}
+
+.menu-navigation.active .L1{
+ transform: translateY(0) rotate(135deg);
+ background-color: black;
+}
+
+.menu-navigation.active .L2{
+ opacity: 0;
+}
+
+.menu-navigation.active .L3{
+ transform: translateY(0) rotate(-135deg);
+ background-color: black;
+}
+
+
+/* la partie du texte principale dans le header */
+.text-principale-information{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-principale-information h1{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    padding-inline: 20px;
+}
+
+.img-rotation{
+   width: 30px;
+   height: 30px;
+   object-fit: cover;
+}
+
+.text-principale-information a{
+    background-color:  green;
+    padding: 12px 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.text-principale-information a:hover{
+  background-color:black;
+  color: white;
+}
+
+
+
+/* la partie du block flottant avec les images qui defile*/
+.block-principale-flottant{
+    position: absolute;
+    right: initial;
+    display: flex;
+    bottom: -20px;
+    width: 90%;
+    height: 80px;
+    padding: 5px 5px;
+    margin-left: 5px;
+    border-radius: 20px;
+
+}
+
+.block-principale-flottant::before, 
+.block-principale-flottant::after{
+  display: none;
+}
+
+.flottant-contenu{
+    padding: 0px;
+    border: 2px solid #33333370;
+}
+
+.number{
+    font-size: 20px;
+     color: green;
+}
+
+.flottant-contenu p{
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/* la grille des images de deuxieme section */
+.grid-image-contente{
+    padding: 50px 2% 20px 2%;
+}
+
+.grid-contenu{
+    gap: 10px;
+    padding: 0px;
+    display: grid;
+    max-height: 120vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "grid1 grid1"
+    "grid2 grid3"
+    "grid4 grid4"
+    "grid6 grid5"
+    ;
+
+}
+
+.grid-prix p{
+    font-size: 20px;
+    color:  rgb(71, 71, 71);
+    font-weight: bold;
+}
+
+
+.grid2{
+  grid-area: grid2;
+  background-color:  rgba(3, 92, 16, 0.589);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 5px;
+}
+
+.grid2 p{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+
+.flotte-grid-block{
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-top-left-radius: 20px;
+    padding: 5px 0 0 5px;
+}
+
+.flotte-grid-block div{
+    border-radius: 15px;
+}
+
+.flotte-grid-block div i{
+    color: transparent;
+    font-size: 19px;
+}
+
+
+/* la partie des images de la categories des produits */
+
+.categories-image{
+    height: auto;
+    padding: 60px 2% 50px 2%;
+}
+
+.texting-categories{
+    margin-bottom: 30px;
+}
+
+.texting-categories h2{
+    font-weight: bold;
+    color: goldenrod;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+.texting-categories p{
+      color: goldenrod;
+      font-size: 15px;
+}
+
+.span-100{
+   color: black;
+}
+
+/* la partie des textes de la categories des images*/
+
+.cont-galeries-image{
+    padding: 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text-categorie-galerie{
+   height: 100%;
+   position: unset;
+   top: 20px;
+   padding-inline: 10px;
+   margin-bottom: 40px;
+   position: relative;
+
+}
+
+.btn-cat{
+   border: none;
+   background-color: transparent;
+   font-size: 20px;
+   margin-bottom: 20px;
+   gap: 10px;
+   align-items: center;
+   padding: 9px 15px;
+   background-color: violet;
+   border-radius: 20px;
+}
+/* faire une petite rotation sur le bouton  */
+
+.filter{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
+.cat-texte{
+ padding: 10px 15px;
+ border: 1px solid #3333337c;
+ border-radius: 20px;
+font-weight: 500;
+font-size: 15px;
+
+}
+
+
+.moteur-image-categorie{
+    display: none;
+    gap: 15px;
+    flex-wrap: nowrap; 
+    padding-inline: 0;
+    width: 100%;
+}
+
+/* le contenaire des images dans la galerie */
+.moteur-image-categorie{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+    padding-inline: 0px;
+    width: 100%;
+}
+
+.groy-categorie{
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.groy-categorie img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+/*  la section contacter les expertes en beauter*/
+.grid-gallerie{
+    background-color: rgba(56, 161, 96, 0.37);
+    padding: 30px 2% 0 2%;
+    flex-direction: column;
+}
+
+.img-contact{
+    height: 100%;
+}
+
+.img-contact img{
+    width: 200px;
+    height:  auto;
+    object-fit: cover;
+    margin-top: 50px;
+    height: 200px;
+}
+
+.texte-contact{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ padding-inline: 50px;
+ text-align: center;
+}
+
+.texte-contact h2 {
+   font-size: 25px;
+   color: goldenrod;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.texte-contact p{
+   font-size: 15px;
+   margin-bottom: 50px;
+   line-height: 20px;
+}
+
+.texte-contact a{
+   padding: 10px 10px;
+   width: 100%;
+   text-align: center;
+   border-radius:  50px;
+   font-weight: bold;
+   font-size: 19px;
+   background-color: green;
+   transition: all 0.5s;
+}
+
+
+.groy-sous-flottant{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-top-left-radius: 15px;
+}
+
+.groy-sous-flottant div{
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groy-sous-flottant div i{
+    font-size: 19px;
+    -webkit-text-stroke-color: blue;
+}
+
+
+}
+
+
+@media (max-width: 550px){
+    
+}
+
+@media (max-width: 450px){
+    
+}
+
