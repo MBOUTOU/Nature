@@ -12,6 +12,7 @@
 
 html{
     scroll-behavior: smooth;
+    scrollbar-3dlight-color: blue;
 }
 
 /* le debut du code dans la patie principale */
@@ -22,7 +23,7 @@ html{
 }
 
 .header-contenu{
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.425)),url(image/fond/principale-img.jpg);
+  background: linear-gradient(rgba(0,0,0,0.5) , rgba(0, 0, 0, 0.425)),url(image/fond/principale-img.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -99,6 +100,10 @@ html{
 .nav-links .subcribs:hover{
     background-color: black;
     color: white;
+}
+
+.link-media{
+    display: none;
 }
 
 /* la partie du menu deroulant */
@@ -409,21 +414,48 @@ html{
 }
 
 .texting-categories{
-    width: 100%;
     margin-bottom: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .texting-categories h2{
     font-weight: bold;
-    color: goldenrod;
-    font-size: 35px;
+    color: black;
+    font-size: 25px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    background: greenyellow;
     margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: 50px;
     position: relative;
 }
+
+.texting-categories h2::before,
+.texting-categories h2::after{
+   position: absolute;
+   content: "";
+   width: 50px;
+   height: 2px;
+   background-color: rgba(0, 0, 0, 0.466);
+
+}
+
+.texting-categories h2::before{
+   left: -50px;
+   bottom: 25px;
+}
+
+.texting-categories h2::after{
+   right: -50px;
+   bottom: 25px;
+}
+
+
 
 
 .texting-categories p{
@@ -495,117 +527,80 @@ html{
 
 .moteur-image-categorie{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap; 
     padding-inline: 15px;
     width: 100%;
 }
 
 .groy-categorie{
-    height: 300px;
+    height: auto;
     width: 250px;
-    border-radius: 20px;
-    overflow: hidden;
     position: relative;
+    border-radius: 10px;
+    background-color: rgba(221, 220, 220, 0.24);
 }
 
 .groy-categorie img{
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
-}
-/* les images categorie */
-
-.Gommage{
-    background-image: url(image/gommage.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.Crème{
-    background-image: url(image/creme.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.parfum{
-    background-image: url(image/parfum.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.Poudre{
-    background-image: url(image/Poudre.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.Savon{
-    background-image: url(image/savon.jpeg);
-    background-size: cover;
-    background-position: center;
+  border-radius: 10px;
 }
 
 .filtreure{
     display: none;
 }
 
+/* la partie des prix et nom du produit */
 
 .groy-sous-flottant{
-    position: absolute;
-    height: 60px;
-    width: 60px;
-    background-color: white;
-    border-top-left-radius: 20px;
-    padding: 5px 0 0 5px;
-    bottom: 0;
-    right: 0;
+    padding: 5px 20px;
+    display: block;
 }
-
-.groy-sous-flottant::before,
-.groy-sous-flottant::after{
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle 24px at top left, 
-      #00000000 98%,
-     white) top left;
-}
-
-.groy-sous-flottant::before{
-    position: absolute;
-    content: "";
-    left: -20px;
-    bottom: 0;
-}
-
-.groy-sous-flottant::after{
-    position: absolute;
-    content: "";
-    right: 0;
-    top: -20px;
-}
-
-.groy-sous-flottant div{
-    width: 100%;
-    height: 100%;
-    background-color: greenyellow;
-    border-radius: 20px;
+ 
+.groy-sous-flottant div li{
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 10px;
+    gap: 20px;
 }
 
-.groy-sous-flottant div i{
-    color: transparent;
-    font-size: 25px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: blue;
+.groy-sous-flottant div li p{
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.groy-sous-flottant div li i{
+  color: green;
+  font-size: 20px;
+}
+
+
+.groy-sous-flottant div li:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.groy-sous-flottant div li:nth-child(2) p{
+   color: rgba(0, 0, 255, 0.795);
 }
 
 
 
+.groy-sous-flottant div li button{
+     padding: 5px 15px;
+     font-size: 16px;
+     border-radius: 20px;
+     background-color: green;
+     border: none;
+     color: white;
+     font-weight: 600;
+     cursor: pointer;
+}
 
 
 /*  la section contacter les expertes en beauter*/
@@ -652,37 +647,67 @@ html{
 }
 
 .img-contact{
-    height: 100%;
+    height: 500px;
+    margin-top: 0px;
 }
 
 .img-contact img{
     width: 450px;
     height: 100%;
     object-fit: cover;
-    height: 100%;
 }
 
 /* la partie des commentaires je vais mettre les commentaires qui slident*/
 
 .commentaire{
-    min-height: 80vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+    padding: 90px 100px; 
     flex-direction: column;
-
 }
 
 .texte-commentaire{
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
 
 .texte-commentaire h2{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 40px;
+    font-size: 25px;
+    background-color: greenyellow;
+    border-radius: 50px;
+    padding: 10px 12px;
+    position: relative;
+}
+
+.texte-commentaire h2::before,
+.texte-commentaire h2::after
+{
+   position: absolute;
+   content:"";
+   width: 50px;
+   height: 2px;
+   bottom: 25px;
+   background-color: rgba(0, 0, 0, 0.466);
+}
+
+.texte-commentaire h2::before{
+   left: -50px;
+   bottom: 25px;
+}
+
+.texte-commentaire h2::after{
+   right: -50px;
+   bottom: 25px;
 }
 
 .box-commentaire{
@@ -690,36 +715,55 @@ html{
     align-items: center;
     justify-content: center;
     height: 100%;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
     text-align: center;
 }
 
 .card-commentaire{
-  padding: 20px 20px;
-  max-width: 300px;
+  padding: 70px 15px 30px 15px;
+  width: 280px;
+  min-height: 250px;
   background-color: rgba(56, 161, 96, 0.37);
   border-radius: 20px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+#id-image-commentaire{
+    position: absolute;
+    top: -30px;
+    left: 95px;
+    padding: 5px;
+    border: 50%;
+    background-color: white;
+    height: 80px;
+    border-radius: 50%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .card-commentaire img{
-   width: 90px;
-   height: 90px;
+   width: 100%;
+   height: 100%;
    object-fit: cover;
-   margin-bottom: 20px;
    border-radius: 50%;
 }
 
 .card-commentaire h2{
    color:  black;
-   margin-bottom: 20px;
+   margin-bottom: 10px;
    text-transform: capitalize;
 }
 
 .card-commentaire p{
   color: #333;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 
@@ -738,7 +782,6 @@ html{
 }
 
 body.active{
-    background-color: #33333370;
     overflow: hidden;
 }
 
@@ -763,27 +806,36 @@ body.active{
     height: 55px;
 }
 
+.nav-link-contanaire.active{
+    background: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    transition: display 0.5s;
+}
+
 .nav-links{
- justify-content: center;
- flex-direction: column;
- gap: 40px;
- visibility: visible;
- position:fixed;
- background-color: #f1f1f1;
- top: 0;
- left: 0;
- z-index: 100;
- width: 100%;
- min-height: 50vh;
- transition: transform 0.3s;
- transform: translateY();
- border-bottom-right-radius: 30px;
- border-bottom-left-radius: 30px;
- transform: translateY(-500px);
+    background-color: rgb(166, 197, 174); 
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    visibility: visible;
+    position:fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 80%;
+    min-height: 100vh;
+    transition: transform 0.5s;
+    transform: translateX(500px);
+    padding-left: 10px;
 }
 
 .nav-links.active{
- transform: translateY(0);
+ transform: translateX(0);
 }
 
 
@@ -801,6 +853,56 @@ body.active{
     font-weight: bold;
     color: #333;
     position: relative;
+}
+
+
+.nav-links .subcribs{
+   padding: 10px 12px;
+   border-radius:  50px;
+   font-weight: bold;
+   font-size: 18px;
+   color:  white;
+   background-color: green;
+   transition: 0.6s background;
+}
+
+.nav-links .subcribs:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.link-media{
+    display: block;
+    gap: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 45px;
+    padding: 20px;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-media a{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    background-color: green;
+    justify-content: center;
+}
+
+.link-media i{
+    font-size: 20px;
+    object-fit: cover;
+    color:  white;
+    margin: 0 10px;
 }
 
 
@@ -856,7 +958,7 @@ body.active{
     font-size: 40px;
     line-height: 50px;
     font-weight: 600;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     padding-inline: 20px;
 }
 
@@ -871,10 +973,10 @@ body.active{
     padding: 12px 0px;
     color: white;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     border-radius: 10px;
     transition: all 0.4s;
-    width: 100%;
+    width: 60%;
     border-radius: 50px;
 }
 
@@ -896,7 +998,6 @@ body.active{
     padding: 5px 5px;
     margin-left: 5px;
     border-radius: 20px;
-
 }
 
 .block-principale-flottant::before, 
@@ -922,14 +1023,14 @@ body.active{
 
 /* la grille des images de deuxieme section */
 .grid-image-contente{
-    padding: 50px 2% 20px 2%;
+    padding: 50px 4% 20px 4%;
 }
 
 .grid-contenu{
     gap: 10px;
     padding: 0px;
     display: grid;
-    max-height: 120vh;
+    max-height: 150vh;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
@@ -990,7 +1091,7 @@ body.active{
 
 .categories-image{
     height: auto;
-    padding: 60px 2% 50px 2%;
+    padding: 60px 4% 50px 4%;
 }
 
 .texting-categories{
@@ -998,20 +1099,28 @@ body.active{
 }
 
 .texting-categories h2{
-    font-weight: bold;
-    color: goldenrod;
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
+.texting-categories h2::before,
+.texting-categories h2::after{
+   position: absolute;
+   content: "";
+   width: 25px;
+   height: 2px;
+   background-color: rgba(0, 0, 0, 0.37);
 
-.texting-categories p{
-      color: goldenrod;
-      font-size: 15px;
 }
 
-.span-100{
-   color: black;
+.texting-categories h2::before{
+   left: -25px;
+   bottom: 20px;
+}
+
+.texting-categories h2::after{
+   right: -25px;
+   bottom: 20px;
 }
 
 /* la partie des textes de la categories des images*/
@@ -1025,11 +1134,10 @@ body.active{
 .text-categorie-galerie{
    height: 100%;
    position: unset;
-   top: 20px;
+   top: 0px;
    padding-inline: 10px;
    margin-bottom: 40px;
    position: relative;
-
 }
 
 .btn-cat{
@@ -1040,8 +1148,9 @@ body.active{
    gap: 10px;
    align-items: center;
    padding: 9px 15px;
-   background-color: violet;
    border-radius: 20px;
+  display: none;
+
 }
 /* faire une petite rotation sur le bouton  */
 
@@ -1049,8 +1158,9 @@ body.active{
    display: flex;
    align-items: center;
    justify-content: center;
+   width: 100%;
    flex-wrap: wrap;
-   gap: 10px;
+   gap: 5px;
 }
 
 .cat-texte{
@@ -1081,36 +1191,90 @@ font-size: 15px;
 }
 
 .groy-categorie{
-    height: 300px;
-    width: 200px;
+    width: 100%;
     border-radius: 20px;
-    overflow: hidden;
     position: relative;
 }
 
 .groy-categorie img{
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
+
+/* la partie des prix et nom du produit */
+
+.groy-sous-flottant{
+    display: block;
+    padding: 5px 20px;
+}
+ 
+.groy-sous-flottant div li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.groy-sous-flottant div li p{
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.groy-sous-flottant div li i{
+  color: green;
+  font-size: 20px;
+}
+
+
+.groy-sous-flottant div li:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.groy-sous-flottant div li:nth-child(2) p{
+   color: rgba(0, 0, 255, 0.795);
+}
+
+
+
+.groy-sous-flottant div li button{
+     padding: 5px 15px;
+     font-size: 16;
+     border-radius: 20px;
+     background-color: green;
+     border: none;
+     color: white;
+     font-weight: 600;
+     cursor: pointer;
+}
 
 
 
 /*  la section contacter les expertes en beauter*/
 .grid-gallerie{
     background-color: rgba(56, 161, 96, 0.37);
-    padding: 30px 2% 0 2%;
+    padding: 40px 2% 0 2%;
     flex-direction: column;
+    height: auto;
 }
-
+ 
 .img-contact{
-    height: 100%;
+   height: 200px;
+   width: 100%;
+   display: flex;
+   align-items: end;
+   justify-content: center;
 }
 
 .img-contact img{
-    width: 200px;
-    height:  auto;
+    width: 180px;
+    height: 150px;
     object-fit: cover;
     margin-top: 50px;
     height: 200px;
@@ -1121,7 +1285,7 @@ font-size: 15px;
  align-items: center;
  justify-content: center;
  flex-direction: column;
- padding-inline: 50px;
+ padding-inline: 30px;
  text-align: center;
 }
 
@@ -1129,49 +1293,108 @@ font-size: 15px;
    font-size: 25px;
    color: goldenrod;
    font-weight: bold;
-   margin-bottom: 20px;
+   margin-bottom: 15px;
 }
 
 .texte-contact p{
    font-size: 15px;
-   margin-bottom: 50px;
+   margin-bottom: 20px;
    line-height: 20px;
 }
 
 .texte-contact a{
    padding: 10px 10px;
-   width: 100%;
+   width: 50%;
    text-align: center;
    border-radius:  50px;
    font-weight: bold;
-   font-size: 19px;
+   font-size: 16px;
    background-color: green;
    transition: all 0.5s;
+   margin-bottom: 15px;
 }
 
-
-.groy-sous-flottant{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    border-top-left-radius: 15px;
+/* la partie des commentaires je vais mettre les commentaires qui slident*/
+.commentaire{
+    height: auto;
+    padding: 70px 0;
+    overflow: hidden;
 }
 
-.groy-sous-flottant div{
+.texte-commentaire{
+    margin-bottom: 100px;
     width: 100%;
-    height: 100%;
-    background-color: greenyellow;
-    border-radius: 15px;
     display: flex;
+    padding: 0 3%;
     align-items: center;
     justify-content: center;
 }
 
-.groy-sous-flottant div i{
-    font-size: 19px;
-    -webkit-text-stroke-color: blue;
+.texte-commentaire h2{
+    font-size: 20px;
+    padding: 10px 13px;
 }
+
+.texte-commentaire h2::before,
+.texte-commentaire h2::after
+{
+   width: 25px;
+   background-color: rgba(0, 0, 0, 0.37);
+}
+
+.texte-commentaire h2::before{
+  left: -25px;
+  bottom: 20px;
+}
+
+.texte-commentaire h2::after{
+   right:-25px;
+   bottom: 20px;
+}
+
+
+.box-commentaire{
+   display: flex;
+   overflow-x: auto;
+   align-items: unset;
+   justify-content: unset;
+   padding: 30px 3% 20px 3%;
+   scroll-snap-type: x proximity;
+   width: 100%;
+   flex-wrap: nowrap;
+   gap: 10px;
+   transition: overflow 0.8s ease-out;
+}
+
+.card-commentaire{
+  padding: 70px 10px 30px 10px;
+  min-width: 250px;
+  height: 250px;
+  margin-bottom: 0px;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.card-commentaire h2{
+ margin-bottom: 20px;
+}
+
+#id-image-commentaire{
+    position: absolute;
+    top: -30px;
+    left: 85px;
+    padding: 5px;
+    border: 50%;
+    background-color: white;
+    height: 80px;
+    border-radius: 50%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 
 
 }
