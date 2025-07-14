@@ -54,5 +54,5 @@ sr.reveal(".title-lien-contact",{
 })
 
 sr.reveal(".title-commentaire",{
-    distance:"65px",
+    distance:"50px",
 })
