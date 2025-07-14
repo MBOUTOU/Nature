@@ -1747,3 +1747,120 @@ position: relative;
     gap: 3px;
 }
 }
+/*  */
+
+
+
+@media(max-width: 360px){
+    
+    .header-contenu {
+        min-height: 75vh;
+    }
+    /* la partie du texte principale dans le header */
+    .text-principale-information h1 {
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding-inline: 10px;
+    }
+
+    .img-rotation {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+    }
+
+    /* La partie collection des images de la catégories*/
+    
+.Collection-texte{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 40px 2% 10px 2%;
+  border-radius: 20px;
+  min-height: auto;
+}
+
+.Collection-texte h1{
+ font-size: 35px;
+ line-height: 45px;
+ margin-bottom: 30px;
+ font-weight: bold;
+ font-family: "Montserrat", sans-serif;
+ font-optical-sizing: auto;
+ color: #333;
+ font-style: normal;
+ position: relative;
+ margin-bottom: 70px;
+}
+/* les images de la categorie */
+ 
+.block-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+.cat-produit{
+    width: 165px;
+    height: 180px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 32px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    /* la partie des textes de la categories des images*/
+
+    .cont-galeries-image {
+        padding: 40px 2% 50px 2%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+    
+.boite{
+    height: 170px;
+    width: 165px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 55px;
+}
+
+.infos-produits{
+    width: 140px;
+    bottom: -30px;
+    left: 15px;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
+}
