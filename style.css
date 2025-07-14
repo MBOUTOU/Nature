@@ -158,8 +158,8 @@ html {
     object-fit: cover;
 }
 
-.text-principale-information a {
-    background-color: green;
+.btn-decouvrir {
+    background-color: #008000;
     padding: 12px 20px;
     color: white;
     font-weight: bold;
@@ -168,7 +168,7 @@ html {
     transition: all 0.4s;
 }
 
-.text-principale-information a:hover {
+.btn-decouvrir:hover {
     background-color: black;
     color: white;
 }
@@ -238,12 +238,13 @@ html {
 /* la grille des images de deuxieme section */
 
 .Product-categorie{  
-        padding: 50px 4% 20px 0%;
+        padding: 50px 0% 20px 0%;
         display: flex;
+        justify-content: center;
         align-items: start;
-        justify-content: space-between;
-        gap: 50px;
-        min-height: 60vh;
+        gap: 20px;
+        min-height: 50vh;
+        flex-wrap: wrap;
         width: 100%;
     }
     
@@ -251,32 +252,79 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
-    width: 60%;
+    width: 55%;
 }
 
 .Collection-texte{
-  grid-area: collection;
-  background-color: rgba(56, 161, 96, 0.37);
-  width: 35%;
-  height: 100%;
-  padding: 100px 100px 50px 4%;
-  border-radius: 40px 100% 30% 10%;
+  position: relative;
+  background-color: rgba(56, 161, 96, 0.116);
+  width: 40%;
+  padding: 100px 50px 50px 4%;
+  border-radius: 20px;
+  min-height: 30vh;
 }
 
 .Collection-texte h1{
- font-size: 45px;
+ font-size: 65px;
  margin-bottom: 30px;
  font-weight: bold;
 font-family: "Montserrat", sans-serif;
 font-optical-sizing: auto;
-color: white;
+color: #333;
+line-height: 70px;
 font-style: normal;
+margin-bottom: 60px;
+position: relative;
 }
+
+.Collection-texte h1::before {
+   content: "";
+   position: absolute;
+   height: 120px;
+   width: 300px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -80px;
+   left: -10px;
+}
+
 
 .Collection-texte h1 span{
   color: green;
+}
+
+.Collection-texte p{
+ margin-bottom: 30px;
+}
+
+.icone-moove{
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   width: 100%;
+}
+
+.image-moove{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    animation: swaper 2s linear infinite;
+}
+
+@keyframes swaper {
+  0%{
+       transform: translateX(5px);
+  }
+  50%{
+    
+   transform: translateX(-5px);
+  }
+  100%{
+    transform: translateX(5px);
+  }
 }
 
 .cat-produit{
@@ -374,7 +422,21 @@ font-style: normal;
     font-optical-sizing: auto;
     font-style: normal;
     margin-bottom: 30px;
+    position: relative;
 }
+
+.texting-categories h2::before {
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 300px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: 0;
+}
+
 
 .texting-categories h2 span{
     font-weight: bold;
@@ -400,7 +462,7 @@ font-style: normal;
 .moteur-image-categorie{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
     position: relative;
@@ -417,9 +479,8 @@ font-style: normal;
 }
 
 .groy-categorie {
-    height: 100%;
+    height: 300px;
     width: 100%;
-    width: 250px;
 }
 
 .groy-categorie img {
@@ -469,7 +530,7 @@ font-style: normal;
     font-size: 50px;
     color: goldenrod;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -482,7 +543,7 @@ font-style: normal;
 .texte-contact p {
     font-size: 19px;
     margin-bottom: 50px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .texte-contact a {
@@ -491,12 +552,13 @@ font-style: normal;
     font-weight: bold;
     font-size: 22px;
     color: white;
-    background-color: black;
+    background-color:  green;
     transition: all 0.5s;
 }
 
 .texte-contact a:hover {
     transform: scale(1.05);
+    background-color: blacks;
 }
 
 .img-contact {
@@ -536,11 +598,25 @@ font-style: normal;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 40px;
-    font-weight: 500;
-    border-radius: 50px;
+    font-weight: 600;
     position: relative;
 }
 
+.texte-commentaire h2 span{
+   color: green;
+}
+
+.texte-commentaire h2::before {
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 280px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: -10px;
+}
 
 .box-commentaire {
     display: flex;
@@ -606,6 +682,7 @@ font-style: normal;
      border-radius: 20px 20px 0 0;
      display: flex;
      align-items: center;
+     flex-wrap: wrap;
      justify-content: space-between;
      gap: 30px;
      padding: 30px 10%;
@@ -686,7 +763,7 @@ font-style: normal;
         background-size: cover;
         padding: 30px 4%;
         border-radius: 20px;
-        min-height: 90vh;
+        min-height: 70vh;
     }
 
     .navbar {
@@ -850,8 +927,8 @@ font-style: normal;
     }
 
     .text-principale-information h1 {
-        font-size: 34px;
-        line-height: 40px;
+        font-size: 45px;
+        line-height: 60px;
         font-weight: 600;
         margin-bottom: 40px;
         padding-inline: 20px;
@@ -865,14 +942,13 @@ font-style: normal;
 
     .text-principale-information a {
         background-color: green;
-        padding: 5px 10px;
+        padding: 10px 12px;
         color: white;
         font-weight: bold;
         font-size: 16px;
         border-radius: 10px;
         transition: all 0.4s;
         width: 35%;
-        border-radius: 50px;
     }
 
     .text-principale-information a:hover {
@@ -916,46 +992,144 @@ font-style: normal;
     }
 
 
-    /* la grille des images de deuxieme section */
+/* la grille des images de deuxieme section */
+
+.Product-categorie{  
+        padding: 20px 2% 20px 2%;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 0px;
+        min-height: 60vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
     
+.block-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Collection-texte{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0% 50px 0%;
+  border-radius: 20px;
+  min-height: 30vh;
+}
 
 
+.Collection-texte h1{
+ font-size: 45px;
+ margin-bottom: 30px;
+ font-weight: bold;
+ font-family: "Montserrat", sans-serif;
+ font-optical-sizing: auto;
+ color: #333;
+ font-style: normal;
+ position: relative;
+ margin-bottom: 70px;
+}
 
-    /* la partie des images de la categories des produits */
+.Collection-texte h1::before {
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 270px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -70px;
+   left: 50px;
+}
 
-    .categories-image {
-        height: auto;
-        padding: 60px 4% 50px 4%;
-    }
+.icone-moove{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
 
-    .texting-categories {
-        margin-bottom: 30px;
-    }
+.image-moove{
+      display: none;
+}
 
-    .texting-categories h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
 
-    .texting-categories h2::before,
-    .texting-categories h2::after {
-        position: absolute;
-        content: "";
-        width: 25px;
-        height: 2px;
-        background-color: rgba(0, 0, 0, 0.37);
+.cat-produit{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+}
 
-    }
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
 
-    .texting-categories h2::before {
-        left: -25px;
-        bottom: 20px;
-    }
+.block-top p{
+  color:  #ffffff;
+  font-size: 16px;
+}
 
-    .texting-categories h2::after {
-        right: -25px;
-        bottom: 20px;
-    }
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 50px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.block-bottom a{
+   padding: 10px 15px;
+   color: #333;
+    background-color:  white;
+   border-radius: 15px;
+   font-size: 16px;
+   transition: background 0.3s;
+}
+
+
+/* la partie des images de la categories des produits */
+.categories-image {
+    height: auto;
+    padding: 60px 2% 50px 2%;
+}
+
+.texting-categories {
+    margin-bottom: 30px;
+}
+
+.texting-categories h2 {
+    font-weight: bold;
+    color: black;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.texting-categories h2 span{
+    font-weight: bold;
+    color: green;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 
     /* la partie des textes de la categories des images*/
 
@@ -974,68 +1148,69 @@ font-style: normal;
         position: relative;
     }
 
-    .btn-cat {
-        border: none;
-        background-color: transparent;
-        font-size: 20px;
-        margin-bottom: 20px;
-        gap: 10px;
-        align-items: center;
-        padding: 9px 15px;
-        border-radius: 20px;
-        display: none;
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
 
-    }
+/* le contenaire des images dans la galerie */
+.moteur-image-categorie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+    
+.boite{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 55px;
+}
 
-    /* faire une petite rotation sur le bouton  */
+.groy-categorie {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+}
 
-    .filter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
+.groy-categorie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+    
+.infos-produits{
+    position: absolute;
+    width: 150px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color:  rgb(250, 255, 250);
+    bottom: -30px;
+    left: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
 
-    .cat-texte {
-        padding: 5px 10px;
-        border: 1px solid #3333337c;
-        border-radius: 20px;
-        font-weight: 500;
-        font-size: 15px;
-    }
+.infos-produits h2{
+   font-size: 16px;
+   font-weight: bold;
+   color: black;
+}
 
-
-    .moteur-image-categorie {
-        display: none;
-        gap: 15px;
-        flex-wrap: nowrap;
-        padding-inline: 0;
-        width: 100%;
-    }
-
-    /* le contenaire des images dans la galerie */
-    .moteur-image-categorie {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        padding-inline: 0px;
-        width: 100%;
-    }
-
-    .groy-categorie {
-        width: 200px;
-        border-radius: 20px;
-        position: relative;
-    }
-
-    .groy-categorie img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+.infos-produits p{
+   font-weight: 500;
+   color: #333;
+}
 
 
     /* la partie des prix et nom du produit */
@@ -1124,15 +1299,15 @@ font-style: normal;
     }
 
     .texte-contact h2 {
-        font-size: 25px;
-        color: goldenrod;
+        font-size: 30px;
+        color: green;
         font-weight: bold;
         margin-bottom: 15px;
     }
 
     .texte-contact p {
         font-size: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         line-height: 20px;
     }
 
@@ -1140,23 +1315,24 @@ font-style: normal;
         padding: 10px 10px;
         width: 50%;
         text-align: center;
-        border-radius: 50px;
+        border-radius: 10px;
         font-weight: bold;
         font-size: 16px;
         background-color: green;
         transition: all 0.5s;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     /* la partie des commentaires je vais mettre les commentaires qui slident*/
     .commentaire {
         height: auto;
-        padding: 70px 0;
+        padding: 50px 2%;
         overflow: hidden;
     }
 
+
     .texte-commentaire {
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         width: 100%;
         display: flex;
         padding: 0 3%;
@@ -1164,48 +1340,41 @@ font-style: normal;
         justify-content: center;
     }
 
-    .texte-commentaire h2 {
-        font-size: 20px;
+    .texte-commentaire h2{
+        font-size: 40px;
         padding: 10px 13px;
     }
 
-    .texte-commentaire h2::before,
-    .texte-commentaire h2::after {
-        width: 25px;
-        background-color: rgba(0, 0, 0, 0.37);
-    }
+.texte-commentaire h2::before {
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 280px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -50px;
+   left: -10px;
+}
 
-    .texte-commentaire h2::before {
-        left: -25px;
-        bottom: 20px;
-    }
-
-    .texte-commentaire h2::after {
-        right: -25px;
-        bottom: 20px;
-    }
-
-
-    .box-commentaire {
-        display: flex;
-        overflow-x: auto;
-        align-items: unset;
-        justify-content: unset;
-        padding: 30px 3% 20px 3%;
-        scroll-snap-type: x proximity;
-        width: 100%;
-        flex-wrap: nowrap;
-        gap: 10px;
-        transition: overflow 0.8s ease-out;
-    }
+.box-commentaire {
+    display: flex;
+    overflow-x: auto;
+    align-items: unset;
+    justify-content: unset;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 23px 2%;
+}
 
     .card-commentaire {
         padding: 70px 10px 30px 10px;
-        min-width: 250px;
-        height: 250px;
-        margin-bottom: 0px;
+        min-width: 100%;
+        margin-bottom: 30px;
         scroll-snap-align: center;
         text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .card-commentaire h2 {
@@ -1233,6 +1402,348 @@ font-style: normal;
 }
 
 
-@media (max-width: 550px) {}
+@media (max-width: 390px) {
 
-@media (max-width: 450px) {}
+    /* la partie du texte principale dans le header */
+    .text-principale-information h1 {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding-inline: 10px;
+    }
+
+    .img-rotation {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    
+.Collection-texte{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0% 10px 0%;
+  border-radius: 20px;
+  min-height: auto;
+}
+
+.Collection-texte h1{
+ font-size: 40px;
+ line-height: 45px;
+ margin-bottom: 30px;
+ font-weight: bold;
+ font-family: "Montserrat", sans-serif;
+ font-optical-sizing: auto;
+ color: #333;
+ font-style: normal;
+ position: relative;
+ margin-bottom: 70px;
+}
+
+/* les images de la categorie */
+ 
+.block-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+.cat-produit{
+    width: 170px;
+    height: 180px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 40px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    /* la partie des textes de la categories des images*/
+
+    .cont-galeries-image {
+        padding: 40px 2% 50px 2%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+    
+.boite{
+    height: 180px;
+    width: 170px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 55px;
+}
+
+.infos-produits{
+    width: 140px;
+    bottom: -30px;
+    left: 20px;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
+}
+
+
+@media (max-width: 375px) {
+
+    .header-contenu {
+        background: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.322)), url(image/fond/principale-img.jpg);
+        background-position: top;
+        background-size: cover;
+        padding: 30px 4%;
+        border-radius: 20px;
+        min-height: 85vh;
+    }
+    /* la partie du texte principale dans le header */
+    .text-principale-information h1 {
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding-inline: 10px;
+    }
+
+    .img-rotation {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+    }
+
+    /* La partie collection des images de la catégories*/
+    
+.Collection-texte{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 40px 2% 10px 2%;
+  border-radius: 20px;
+  min-height: auto;
+}
+
+.Collection-texte h1{
+ font-size: 40px;
+ line-height: 45px;
+ margin-bottom: 30px;
+ font-weight: bold;
+ font-family: "Montserrat", sans-serif;
+ font-optical-sizing: auto;
+ color: #333;
+ font-style: normal;
+ position: relative;
+ margin-bottom: 70px;
+}
+/* les images de la categorie */
+ 
+.block-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+.cat-produit{
+    width: 170px;
+    height: 180px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 32px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    /* la partie des textes de la categories des images*/
+
+    .cont-galeries-image {
+        padding: 40px 2% 50px 2%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+    
+.boite{
+    height: 180px;
+    width: 170px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 55px;
+}
+
+.infos-produits{
+    width: 140px;
+    bottom: -30px;
+    left: 15px;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
+
+}
+
+
+@media(max-width: 414px){
+    
+    .header-contenu {
+        min-height: 65vh;
+    }
+    /* la partie du texte principale dans le header */
+    .text-principale-information h1 {
+        font-size: 35px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding-inline: 10px;
+    }
+
+    .img-rotation {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+    }
+
+    /* La partie collection des images de la catégories*/
+    
+.Collection-texte{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 40px 2% 10px 2%;
+  border-radius: 20px;
+  min-height: auto;
+}
+
+.Collection-texte h1{
+ font-size: 40px;
+ line-height: 45px;
+ margin-bottom: 30px;
+ font-weight: bold;
+ font-family: "Montserrat", sans-serif;
+ font-optical-sizing: auto;
+ color: #333;
+ font-style: normal;
+ position: relative;
+ margin-bottom: 70px;
+}
+/* les images de la categorie */
+ 
+.block-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+.cat-produit{
+    width: 170px;
+    height: 180px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 32px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    /* la partie des textes de la categories des images*/
+
+    .cont-galeries-image {
+        padding: 40px 2% 50px 2%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+    
+.boite{
+    height: 180px;
+    width: 170px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 55px;
+}
+
+.infos-produits{
+    width: 140px;
+    bottom: -30px;
+    left: 15px;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
+}

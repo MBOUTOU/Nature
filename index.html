@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#008000">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +19,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <title>Clairwhy</title>
-  <style>
-    /* .header-contenu{
-            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url(image/fond/principale-img.jpg);
-      }  */
-  </style>
+  <title>ClairwhyNature</title>
 </head>
 
 <body>
@@ -58,9 +54,9 @@
         </button>
       </nav>
       <div class="text-principale-information">
-        <h1>La Gamme des produits Clairwhy 100% Naturel <img src="logo/fleur.png" class="img-rotation"
-            alt="image de la fleur qui tourne"> .</h1>
-        <a href="#">Découvrir</a>
+        <h1 class="titre-1">La Gamme des produits Clairwhy 100% Naturel <img src="logo/fleur.png" class="img-rotation"
+            alt="image de la fleur qui tourne">.</h1>
+        <a href="#block-left" class="btn-decouvrir">Découvrir</a>
       </div>
       <div class="block-principale-flottant">
         <div class="flottant-contenu">
@@ -74,56 +70,59 @@
       </div>
     </div>
   </main>
-
   <section class="Product-categorie">
-      <div class="Collection-texte">
-         <h1>Catégories des <span> Produits</span> <br>100% Naturels</h1>
-         <P>Découvrez nos produits naturels marocainne pour le soins de votre corps </P>
-      </div>
-      <div class="block-left">
-       <div class="cat-produit savon">
-            <div class="block-top">
-              <P>Savons</P>
-            </div>
-            <div class="block-bottom">
-              <a href="#">Voir plus</a>
+        <div class="Collection-texte">
+          <div class="colle-sous">
+                <h1 class="title-collect">Catégories des Produits <span>100% </span> Naturels </h1>
+                <P>Découvrez nos produits naturels marocainne pour le soins de votre corps </P>
           </div>
-      </div> 
-      <div class="cat-produit poudre">
-            <div class="block-top">
-              <P>Poudre</P>
-            </div>
-            <div class="block-bottom">
-              <a href="#">Voir plus</a>
+          <div class="icone-moove">
+            <img src="logo/fleche.png" alt="l'icone qui bouge de gauche à droite" class="image-moove">
           </div>
-      </div> 
-      <div class="cat-produit gommage">
-            <div class="block-top">
-              <P>Gommage</P>
+        </div>
+    <div class="block-left" id="block-left">
+        <div class="cat-produit savon">
+              <div class="block-top">
+                <P>Savons</P>
+              </div>
+              <div class="block-bottom">
+                <a href="#">Voir plus</a>
+              </div>
+          </div> 
+        <div class="cat-produit poudre">
+              <div class="block-top">
+                <P>Poudre</P>
+              </div>
+              <div class="block-bottom">
+                <a href="#">Voir plus</a>
             </div>
-            <div class="block-bottom">
-              <a href="#">Voir plus</a>
-          </div>
-      </div> 
-      <div class="cat-produit huile">
-            <div class="block-top">
-              <P>Huile</P>
+        </div> 
+        <div class="cat-produit gommage">
+              <div class="block-top">
+                <P>Gommage</P>
+              </div>
+              <div class="block-bottom">
+                <a href="#">Voir plus</a>
             </div>
-            <div class="block-bottom">
-              <a href="#">Voir plus</a>
-          </div>
-      </div>
-
-      </div>
+        </div> 
+        <div class="cat-produit huile">
+              <div class="block-top">
+                <P>Huile</P>
+              </div>
+              <div class="block-bottom">
+                <a href="#">Voir plus</a>
+            </div>
+        </div>
+    </div>
   </section>
   <section class="categories-image">
     <div class="texting-categories">
-      <h2>Notre <span>Collection</span></h2>
+      <h2 class="title-galerie">Notre <span>Collection</span></h2>
     </div>
-    <div class="cont-galeries-image">
+    <div class="cont-galeries-image" id="cont-galeries-image">
         <ul class="moteur-image-categorie">
           <li class="boite">
-                <a href="aspect/produit1.html" class="groy-categorie">
+                <a href="pages/produit1.html" class="groy-categorie">
                     <img src="image/huile/produit-huile (3).jpeg" alt="">
                     <div class="infos-produits">
                       <h2>Huile de cacao</h2>
@@ -153,7 +152,7 @@
                 <a href="#" class="groy-categorie">
                     <img src="image/gommage/produit-gommage (1).jpeg" alt="">
                     <div class="infos-produits">
-                      <h2>Potta gommage</h2>
+                      <h2>gommage</h2>
                       <p>15000$</p>
                     </div>
                 </a>
@@ -162,7 +161,7 @@
                 <a href="#" class="groy-categorie">
                     <img src="image/huile/produit-huile (3).jpeg" alt="">
                     <div class="infos-produits">
-                      <h2>Potta gommage</h2>
+                      <h2>gommage</h2>
                       <p>15000$</p>
                     </div>
                 </a>
@@ -170,7 +169,7 @@
                 <a href="#" class="groy-categorie">
                     <img src="image/poudre/produit-poudre (5).jpeg" alt="">
                     <div class="infos-produits">
-                      <h2>Potta gommage</h2>
+                      <h2>Beurre</h2>
                       <p>15000$</p>
                     </div>
                 </a>
@@ -179,7 +178,7 @@
                 <a href="#" class="groy-categorie">
                     <img src="image/huile/produit-huile (6).jpeg" alt="">
                     <div class="infos-produits">
-                      <h2>Potta gommage</h2>
+                      <h2>Oliver</h2>
                       <p>15000$</p>
                     </div>
                 </a>
@@ -187,9 +186,9 @@
           
           <li class="boite">
                 <a href="#" class="groy-categorie">
-                    <img src="image/huile/produit-huile (6).jpeg" alt="">
+                    <img src="image/huile/produit-huile (7).jpeg" alt="">
                     <div class="infos-produits">
-                      <h2>Potta gommage</h2>
+                      <h2>Huile</h2>
                       <p>15000$</p>
                     </div>
                 </a>
@@ -202,10 +201,10 @@
   <!-- la section contacter les expertes en beauté-->
   <div class="grid-gallerie">
     <div class="texte-contact">
-      <h2>Besoin de conseils ?</h2>
-      <p>Nos expertes sont à votre disposition pour répondre à toutes vos questions et vous guider vers les produits les
+      <h2 class="title-contact">Besoin de conseils ?</h2>
+      <p class="title-paragraphe">Nos expertes sont à votre disposition pour répondre à toutes vos questions et vous guider vers les produits les
         mieux adaptés à vos besoins. Profitez d'un accompagnement sur mesure et d'une expertise reconnue.</p>
-      <a href="#">Contacter</a>
+      <a href="#" class="title-lien-contact">Contacter</a>
     </div>
     <div class="img-contact">
       <img src="image/fond/fond-femme (1).png" alt="">
@@ -215,7 +214,7 @@
   <!-- les commentaires des clients -->
   <div class="commentaire">
     <div class="texte-commentaire">
-      <h2>Avis Clients</h2>
+      <h2 class="title-commentaire">Avis <span>Clients</span></h2>
     </div>
     <div class="box-commentaire">
        <div class="card-commentaire">
@@ -249,7 +248,7 @@
   </div>
 <footer class="pied-page">
    <div class="footer-element">
-       <img src="logo/shop (1).jpg" alt="">
+      <a href="index.html"><img src="logo/shop (1).jpg" alt=""></a>
    </div>
    <div class="footer-element">
           <ul class="footer-liens">
@@ -268,8 +267,8 @@
 </footer>
 
 
-
-   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="script/script.js"></script>
   <script src="script/script-2.js"></script>
 </body>
