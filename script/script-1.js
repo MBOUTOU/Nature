@@ -48,6 +48,15 @@ const SecondImages = document.querySelectorAll(".letter-image");
     });
   });
 
+//---------------------------------------
+
+window.sr=ScrollReveal({
+  duration: 1500,
+});
+
+sr.reveal(".detail-image , .detail-tout",{
+  distance: "65px",
+})
 
 
 
