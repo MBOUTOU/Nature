@@ -1723,7 +1723,15 @@ position: relative;
         flex-direction: column;
         gap: 10px;
     }
-    
+
+.texting-categories h2 {
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 .cont-galeries-image {
     height: auto;
     position: relative;
@@ -1731,9 +1739,37 @@ position: relative;
     padding: 20px 0px;
 }
     
+.texting-categories h2 span{
+    font-weight: bold;
+    color: green;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.texte-commentaire h2::before {
+   content: "";
+   position: absolute;
+   height: 80px;
+   width: 180px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: -10px;
+}
+
+/* le contenaire des images dans la galerie */
+.moteur-image-categorie {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+}
 .boite{
     height: 180px;
-    width: 170px;
+    width: 180px;
     position: relative;
     border-radius: 15px;
     margin-bottom: 55px;
@@ -1846,6 +1882,41 @@ position: relative;
     position: relative;
     display: flex;
     padding: 20px 0px;
+}
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+    
+.texting-categories h2 span{
+    font-weight: bold;
+    color: green;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.texte-commentaire h2::before {
+   content: "";
+   position: absolute;
+   height: 80px;
+   width: 180px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -70px;
+   left: -10px;
+}
+
+/* le contenaire des images dans la galerie */
+.moteur-image-categorie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
 }
     
 .boite{
