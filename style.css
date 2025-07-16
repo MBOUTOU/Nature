@@ -528,12 +528,17 @@ position: relative;
 
 .texte-contact h2 {
     font-size: 50px;
-    color: goldenrod;
+    color: white;
     font-weight: bold;
     margin-bottom: 40px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.texte-contact h2 span{
+    font-size: 50px;
+    color: green;
 }
 
 .texte-contact {
