@@ -22,7 +22,7 @@ window.sr = ScrollReveal({
 
 sr.reveal(".titre-1, .title-galerie", {
     origin: "bottom",
-    distance: "60px",
+    distance: "50px",
 })
 
 sr.reveal(".title-collect", {
@@ -50,7 +50,7 @@ sr.reveal(".title-paragraphe",{
 
 sr.reveal(".title-lien-contact",{
     distance:"65px",
-    delay: 500,
+    delay: 350,
 })
 
 sr.reveal(".title-commentaire",{
