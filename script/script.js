@@ -16,7 +16,7 @@ gsap.to(".img-rotation", {
 //------------------------------------------------------
 // animation avec scrollreveal 
 window.sr = ScrollReveal({
-    duration: 1500,
+    duration: 1000,
     distance: "65px",
 });
 
