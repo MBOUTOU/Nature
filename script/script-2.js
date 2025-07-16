@@ -1,4 +1,3 @@
-buttons.forEach(catTexte => catTexte.addEventListener("click", filterCat));
 //---------------------------------------------------------
 
 const Menuhumberger = document.querySelector(".menu-navigation");
