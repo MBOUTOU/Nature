@@ -1869,7 +1869,7 @@ position: relative;
     
 /* la partie links medias dans le menu */
     .link-media {
-        bottom: 20px;
+        bottom: 50px;
         left: 15px;
         padding: 10px;
     }
@@ -2054,6 +2054,7 @@ position: relative;
 
 .card-commentaire {
     margin-bottom: 0px;
+     border-radius: 0 0 10px 10px;
 }
 
 /* la partie du footer de la page */
