@@ -1736,7 +1736,7 @@ position: relative;
 
     .header-contenu {
         padding: 30px 4%;
-        height: 85vh;
+        min-height: 85vh;
     }
 
     /* la partie du texte principale dans le header */
@@ -1827,11 +1827,11 @@ position: relative;
 }
     
 .boite{
-    height: 1800px;
+    height: 170px;
     width: 160px;
     position: relative;
     border-radius: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 50px;
 }
 
 .infos-produits{
@@ -1864,6 +1864,17 @@ position: relative;
         width: 25px;
         height: 25px;
         object-fit: cover;
+    }
+    
+/* la partie links medias dans le menu */
+    .link-media {
+        bottom: 20px;
+        left: 15px;
+        padding: 10px;
+    }
+
+    .social-media {
+        gap: 15px;
     }
 
     /* La partie collection des images de la catégories*/
