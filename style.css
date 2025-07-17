@@ -711,7 +711,7 @@ position: relative;
 .pied-page{
      background-color: rgba(0, 128, 0, 0.555);
      border-radius: 20px 20px 0 0;
-     padding: 30px 10%;
+     padding: 30px 5%;
      position: relative;
 }
 
@@ -752,6 +752,19 @@ position: relative;
   font-size: 20px;
   color: white;
   font-weight: 600;
+}
+
+.abonne{
+ padding: 12px 20px;
+ background-color: white;
+ color: black;
+ border-radius: 10px;
+ transition: 0.3s ;
+}
+
+.abonne:hover{
+ background-color: black;
+ color: white;
 }
 
 .footer-social-media{
@@ -902,7 +915,6 @@ position: relative;
 
     .social-media {
         display: flex;
-        align-items: center;
         align-items: center;
         gap: 20px;
     }
@@ -1187,9 +1199,6 @@ position: relative;
     }
 
     .text-categorie-galerie {
-        height: 100%;
-        position: unset;
-        top: 0px;
         padding-inline: 10px;
         margin-bottom: 20px;
         position: relative;
@@ -1572,18 +1581,12 @@ position: relative;
 @media (max-width: 375px) {
 
     .header-contenu {
-        background: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.322)), url(image/fond/principale-img.jpg);
-        background-position: top;
-        background-size: cover;
         padding: 30px 4%;
-        border-radius: 20px;
-        min-height: 85vh;
+        height: 85vh;
     }
+
     /* la partie du texte principale dans le header */
     .text-principale-information h1 {
-        font-size: 35px;
-        line-height: 40px;
-        font-weight: 600;
         margin-bottom: 40px;
         padding-inline: 10px;
     }
@@ -1591,18 +1594,12 @@ position: relative;
     .img-rotation {
         width: 25px;
         height: 25px;
-        object-fit: cover;
     }
 
     /* La partie collection des images de la catégories*/
-    
 .Collection-texte{
-  position: relative;
-  background-color: transparent;
-  width: 100%;
   text-align: center;
   padding: 40px 2% 10px 2%;
-  border-radius: 20px;
   min-height: auto;
 }
 
@@ -1610,20 +1607,13 @@ position: relative;
  font-size: 40px;
  line-height: 45px;
  margin-bottom: 30px;
- font-weight: bold;
- font-family: "Montserrat", sans-serif;
- font-optical-sizing: auto;
- color: #333;
- font-style: normal;
+ font-weight: 600;
  position: relative;
  margin-bottom: 70px;
 }
 /* les images de la categorie */
  
 .block-left{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
     width: 100%;
@@ -1634,8 +1624,6 @@ position: relative;
 .cat-produit{
     width: 170px;
     height: 180px;
-    border-radius: 20px;
-    position: relative;
     margin-bottom: 35px;
     padding: 20px;
 }
@@ -1655,28 +1643,41 @@ position: relative;
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* la partie des textes de la categories des images*/
 
-    /* la partie des textes de la categories des images*/
+.cont-galeries-image {
+    padding: 0;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .cont-galeries-image {
-        padding: 40px 2% 50px 2%;
-        flex-direction: column;
-        gap: 10px;
-    }
-    
+.text-categorie-galerie {
+    padding-inline: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
 .cont-galeries-image {
     height: auto;
     position: relative;
     display: flex;
     padding: 20px 0px;
 }
+
+/* le contenaire des images dans la galerie */
+.moteur-image-categorie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
     
 .boite{
-    height: 180px;
-    width: 170px;
+    height: 1800px;
+    width: 160px;
     position: relative;
     border-radius: 15px;
-    margin-bottom: 55px;
+    margin-bottom: 0px;
 }
 
 .infos-produits{
@@ -2043,7 +2044,7 @@ position: relative;
 
 /* la partie du footer de la page */
 .pied-page{
-     padding: 30px 3%;
+     padding: 10px 3%;
 }
 
 .footer-element img{
@@ -2054,6 +2055,7 @@ position: relative;
 .footer-sous{
      gap: 20px;
      padding: 30px;
+     margin-bottom: 15px;
 }
 
 .blache-ffoter{
@@ -2062,11 +2064,18 @@ position: relative;
     font-size: 14px;
 }
 
-
 .footer-liens li a{
   font-size: 18px;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.abonne{
+ padding: 10px 15px;
+ background-color: white;
+ color: black;
+ border-radius: 10px;
+ transition: 0.3s ;
 }
 
 .footer-social-media{
