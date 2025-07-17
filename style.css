@@ -850,20 +850,24 @@ position: relative;
     }
 
     .nav-links {
-        background-color: rgb(166, 197, 174);
+        background: linear-gradient(rgba(94, 114, 85, 0.781), rgba(88, 87, 87, 0.596)), url(image/fond/fondu\ \(2\).jpeg);
         justify-content: center;
         flex-direction: column;
+        background-position: center;
+        background-size: cover;
         gap: 40px;
         visibility: visible;
         position: fixed;
         top: 0;
         right: 0;
         z-index: 100;
-        width: 80%;
+        width: 70%;
         min-height: 100vh;
         transition: transform 0.5s;
-        transform: translateX(500px);
+        transform: translateX(400px);
         padding-left: 10px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
     }
 
     .nav-links.active {
@@ -883,14 +887,14 @@ position: relative;
     .nav-links .les-liens li a {
         font-size: 20px;
         font-weight: bold;
-        color: #333;
+        color: white;
         position: relative;
     }
 
 
     .nav-links .subcribs {
         padding: 10px 12px;
-        border-radius: 50px;
+        border-radius: 10px;
         font-weight: bold;
         font-size: 18px;
         color: white;
@@ -903,7 +907,7 @@ position: relative;
         color: white;
     }
 
-
+/* la partie links medias dans le menu */
     .link-media {
         display: block;
         gap: 20px;
@@ -925,7 +929,6 @@ position: relative;
         border-radius: 50%;
         display: flex;
         align-items: center;
-        background-color: green;
         justify-content: center;
     }
 
@@ -962,7 +965,7 @@ position: relative;
 
     .menu-navigation.active .L1 {
         transform: translateY(0) rotate(135deg);
-        background-color: black;
+        background-color: white;
     }
 
     .menu-navigation.active .L2 {
@@ -971,7 +974,7 @@ position: relative;
 
     .menu-navigation.active .L3 {
         transform: translateY(0) rotate(-135deg);
-        background-color: black;
+        background-color: white;
     }
 
 
@@ -1461,233 +1464,6 @@ position: relative;
         justify-content: center;
 
     }
-
-
-
-}
-
-
-@media (max-width: 390px) {
-
-    /* la partie du texte principale dans le header */
-    .text-principale-information h1 {
-        font-size: 40px;
-        line-height: 40px;
-        font-weight: 600;
-        margin-bottom: 40px;
-        padding-inline: 10px;
-    }
-
-    .img-rotation {
-        width: 30px;
-        height: 30px;
-        object-fit: cover;
-    }
-    
-.Collection-texte{
-  position: relative;
-  background-color: transparent;
-  width: 100%;
-  text-align: center;
-  padding: 40px 0% 10px 0%;
-  border-radius: 20px;
-  min-height: auto;
-}
-
-.Collection-texte h1{
- font-size: 40px;
- line-height: 45px;
- margin-bottom: 30px;
- font-weight: bold;
- font-family: "Montserrat", sans-serif;
- font-optical-sizing: auto;
- color: #333;
- font-style: normal;
- position: relative;
- margin-bottom: 70px;
-}
-
-/* les images de la categorie */
- 
-.block-left{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 12px 0;
-}
-
-
-.cat-produit{
-    width: 170px;
-    height: 180px;
-    border-radius: 20px;
-    position: relative;
-    margin-bottom: 35px;
-    padding: 20px;
-}
-
-.block-top{
-  backdrop-filter: blur(20px);
-  width: 100%;
-  padding: 6px 10px;
-  border-radius: 20px;
-  background-color: #3333;
-}
-
-.block-bottom{
-   position: absolute;
-   bottom: -15px;
-   left: 40px;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-    /* la partie des textes de la categories des images*/
-
-    .cont-galeries-image {
-        padding: 40px 2% 50px 2%;
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-.cont-galeries-image {
-    height: auto;
-    position: relative;
-    display: flex;
-    padding: 20px 0px;
-}
-    
-.boite{
-    height: 180px;
-    width: 170px;
-    position: relative;
-    border-radius: 15px;
-    margin-bottom: 55px;
-}
-
-.infos-produits{
-    width: 140px;
-    bottom: -30px;
-    left: 20px;
-    box-shadow: -4px 5px 10px #6b6b6b52;
-    gap: 3px;
-}
-}
-
-
-@media (max-width: 375px) {
-
-    .header-contenu {
-        padding: 30px 4%;
-        height: 85vh;
-    }
-
-    /* la partie du texte principale dans le header */
-    .text-principale-information h1 {
-        margin-bottom: 40px;
-        padding-inline: 10px;
-    }
-
-    .img-rotation {
-        width: 25px;
-        height: 25px;
-    }
-
-    /* La partie collection des images de la catégories*/
-.Collection-texte{
-  text-align: center;
-  padding: 40px 2% 10px 2%;
-  min-height: auto;
-}
-
-.Collection-texte h1{
- font-size: 40px;
- line-height: 45px;
- margin-bottom: 30px;
- font-weight: 600;
- position: relative;
- margin-bottom: 70px;
-}
-/* les images de la categorie */
- 
-.block-left{
-    gap: 10px;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 12px 0;
-}
-
-
-.cat-produit{
-    width: 170px;
-    height: 180px;
-    margin-bottom: 35px;
-    padding: 20px;
-}
-
-.block-top{
-  backdrop-filter: blur(20px);
-  width: 100%;
-  padding: 6px 10px;
-  border-radius: 20px;
-  background-color: #3333;
-}
-
-.block-bottom{
-   position: absolute;
-   bottom: -15px;
-   left: 32px;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* la partie des textes de la categories des images*/
-
-.cont-galeries-image {
-    padding: 0;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.text-categorie-galerie {
-    padding-inline: 10px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.cont-galeries-image {
-    height: auto;
-    position: relative;
-    display: flex;
-    padding: 20px 0px;
-}
-
-/* le contenaire des images dans la galerie */
-.moteur-image-categorie {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-    
-.boite{
-    height: 1800px;
-    width: 160px;
-    position: relative;
-    border-radius: 15px;
-    margin-bottom: 0px;
-}
-
-.infos-produits{
-    width: 140px;
-    bottom: -30px;
-    left: 15px;
-    box-shadow: -4px 5px 10px #6b6b6b52;
-    gap: 3px;
-}
-
 }
 
 
@@ -1840,7 +1616,233 @@ position: relative;
     gap: 3px;
 }
 }
+
+
+
+@media (max-width: 390px) {
+
+    /* la partie du texte principale dans le header */
+    .text-principale-information h1 {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding-inline: 10px;
+    }
+
+    .img-rotation {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    
+.Collection-texte{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0% 10px 0%;
+  border-radius: 20px;
+  min-height: auto;
+}
+
+.Collection-texte h1{
+ font-size: 40px;
+ line-height: 45px;
+ margin-bottom: 30px;
+ font-weight: bold;
+ font-family: "Montserrat", sans-serif;
+ font-optical-sizing: auto;
+ color: #333;
+ font-style: normal;
+ position: relative;
+ margin-bottom: 70px;
+}
+
+/* les images de la categorie */
+ 
+.block-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+.cat-produit{
+    width: 170px;
+    height: 180px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 40px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    /* la partie des textes de la categories des images*/
+
+    .cont-galeries-image {
+        padding: 40px 2% 50px 2%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+    
+.boite{
+    height: 180px;
+    width: 170px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 55px;
+}
+
+.infos-produits{
+    width: 140px;
+    bottom: -30px;
+    left: 20px;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
+}
+
+
 /*  */
+
+@media (max-width: 375px) {
+
+    .header-contenu {
+        padding: 30px 4%;
+        height: 85vh;
+    }
+
+    /* la partie du texte principale dans le header */
+    .text-principale-information h1 {
+        margin-bottom: 40px;
+        padding-inline: 10px;
+    }
+
+    .img-rotation {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* La partie collection des images de la catégories*/
+.Collection-texte{
+  text-align: center;
+  padding: 40px 2% 10px 2%;
+  min-height: auto;
+}
+
+.Collection-texte h1{
+ font-size: 40px;
+ line-height: 45px;
+ margin-bottom: 30px;
+ font-weight: 600;
+ position: relative;
+ margin-bottom: 70px;
+}
+/* les images de la categorie */
+ 
+.block-left{
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 0;
+}
+
+
+.cat-produit{
+    width: 170px;
+    height: 180px;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+
+.block-top{
+  backdrop-filter: blur(20px);
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background-color: #3333;
+}
+
+.block-bottom{
+   position: absolute;
+   bottom: -15px;
+   left: 32px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* la partie des textes de la categories des images*/
+
+.cont-galeries-image {
+    padding: 0;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text-categorie-galerie {
+    padding-inline: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cont-galeries-image {
+    height: auto;
+    position: relative;
+    display: flex;
+    padding: 20px 0px;
+}
+
+/* le contenaire des images dans la galerie */
+.moteur-image-categorie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+    
+.boite{
+    height: 1800px;
+    width: 160px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 0px;
+}
+
+.infos-produits{
+    width: 140px;
+    bottom: -30px;
+    left: 15px;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+    gap: 3px;
+}
+
+}
 
 
 
