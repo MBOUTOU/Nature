@@ -217,6 +217,7 @@ html,body{
 
 .delibero-produit ul li{
   position: relative;
+  margin-bottom: 10px;
 }
 
 .delibero-produit ul li::before{
@@ -484,9 +485,9 @@ transition: 0.3s;
   background-color: white;
   width: 90%;
   border-radius: 20px;
-  padding: 5px;
+  padding: 10px;
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 50px;
   display: flex;
   align-items: center;
@@ -497,7 +498,10 @@ transition: 0.3s;
 .title-image-similaire  h2 {
     font-weight: bold;
     color: black;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .title-image-similaire h2 span{
@@ -712,9 +716,36 @@ transition: 0.3s;
    object-fit: cover;
  }
 
+/* la partie de la description des elements */
+
+.description-section{
+  padding: 0;
+
+}
+
+.box-element{
+    padding: 0px 30px;
+}
+
+.title-icone-header li h2{
+   font-size: 18px;
+}
+
+
+.icone{
+  background-color: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.fa-arrow-down{
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
 
 /* la partie des buttons  add et contact */
-
 .add-contact{
   padding: 0;
   display: flex;
@@ -746,10 +777,6 @@ transition: 0.3s;
 .description-section{
   padding: 50px 3%;
   margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -765,15 +792,10 @@ transition: 0.3s;
 /* la partie des images similaires */
 
 .image-similaire{
-  display: flex;
-  align-items: start;
-  justify-content: center;
   padding: 10px 0 20px 0;
 }
 
 .title-image-similaire{
-  background-color: white;
-  width: 90%;
   top: -20px;
   left: 18px;
   padding: 5px;
@@ -785,11 +807,17 @@ transition: 0.3s;
     font-size: 20px;
 }
 
+.block-img{
+  gap: 15px;
+  display: grid;
+ grid-template-columns: repeat(2, 1fr);
+}
+
 .boite{
-    height: 340px;
-    width: 340px;
+    height: 180px;
+    width: 165px;
     position: relative;
-    margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 .groy-categorie img {
@@ -801,15 +829,32 @@ transition: 0.3s;
 
 .infos-produits{
     position: absolute;
-    width: 250px;
+    width: 140px;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color:  rgb(250, 255, 250);
     bottom: -30px;
-    left: 40px;
+    left: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+
+}
+
+.infos-produits h2{
+   font-size: 16px;
+}
+
+.infos-produits p{
+  font-size: 16px;
 }
 
 }
+
+
+
 
 @media  (max-width: 390px) {
   /* image principale*/
@@ -856,6 +901,8 @@ transition: 0.3s;
  }
 }
 
+
+/*  */
 @media  (max-width: 360px) {
     /* image principale*/
   .detail-image{
@@ -888,6 +935,156 @@ transition: 0.3s;
    object-fit: cover;
  }
 
+/* la partie de la description des elements */
+
+.description-section{
+  padding: 0;
+
+}
+
+.box-element{
+    padding: 0px 30px;
+}
+
+.title-icone-header li h2{
+   font-size: 18px;
+}
+
+
+.icone{
+  background-color: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.fa-arrow-down{
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+
+/* la patie des livraison et instreuctions */
+
+.delibero-produit{
+   padding-inline: 10px;
+   max-width: 100%;
+}
+
+.delibero-produit{
+  margin-bottom: 30px;
+}
+
+.delibero-produit ul li{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+
+/* la partie des buttons  add et contact */
+.add-contact{
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.effect:hover{
+ background-color: black;
+ color: white;
+}
+
+.btn1{
+  padding: 10px 10px;
+  font-size: 12px;
+}
+
+.btn3{
+  padding: 10px 12px;
+  background-color: rgba(55, 218, 55, 0.973);
+  color: black;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* la partie de la description des elements */
+
+.description-section{
+  padding: 50px 3%;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.box-element{
+ background-color: rgba(81, 163, 113, 0.116); 
+  width: 90%;
+  flex-direction: column;
+  padding: 20px 30px;
+  display: flex;
+  border-radius: 20px;
+}
+
+/* la partie des images similaires */
+
+.image-similaire{
+  padding: 10px 0 20px 0;
+}
+
+.title-image-similaire{
+  top: -20px;
+  left: 18px;
+  padding: 5px;
+}
+
+.title-image-similaire  h2 {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.block-img{
+  gap: 10px;
+  display: grid;
+ grid-template-columns: repeat(2, 1fr);
+}
+
+.boite{
+    height: 180px;
+    width: 160px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.groy-categorie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.infos-produits{
+    position: absolute;
+    width: 130px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color:  rgb(250, 255, 250);
+    bottom: -30px;
+    left: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: -4px 5px 10px #6b6b6b52;
+
+}
+
+.infos-produits h2{
+   font-size: 15px;
+}
+
+.infos-produits p{
+  font-size: 15px;
+}
  
 }
 
