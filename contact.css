@@ -145,6 +145,9 @@ body{
   color: white;
 }
 
+::placeholder{
+  color: black;
+}
 
 /* la partie des elements des formulaire */
 .section-contenu-contact{
@@ -374,4 +377,21 @@ body{
     .nav-links .subcribs:hover {
         background-color: black;
         color: white;
-    }
+} 
+
+/* la partie des mes formulaires de contacte */
+
+.form-newslater{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column-reverse;
+}
+
+
+
+
+
+}
