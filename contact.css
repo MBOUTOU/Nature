@@ -21,13 +21,245 @@ body{
   font-style: normal;
 } 
 
-/*  */
+
+/* le debut du code dans la patie principale */
 
 .principale {
     height: auto;
     padding: 10px;
 }
 
+.header-contenu {
+    /* background-color: rgb(56, 161, 96); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.425)), url(image/fond/principale-img.jpg);
+    position: relative;
+    padding: 30px 4%;
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    border-radius: 20px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.nav-logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    transition: all 0.3s;
+}
+
+.nav-links .les-liens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.nav-links .les-liens li a {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.nav-links .les-liens li a::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s width;
+}
+
+.nav-links .les-liens li a:hover::before {
+    width: 100%;
+}
+
+.nav-links .subcribs {
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background-color: green;
+    transition: 0.6s background;
+}
+
+.nav-links .subcribs:hover {
+    background-color: black;
+    color: white;
+}
+
+.link-media {
+    display: none;
+}
+
+/* la patie de la navigation menu*/
+.menu-navigation{
+  display: none;
+}
+
+/* la partie du texte pricipale de ma page */
+.text-principale-information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.sous-prince{
+  width: 550px;
+  max-width: 100%;
+}
+
+.title-header{
+  font-size: 65px;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.sous-prince p{
+  font-size: 16px;
+  color: white;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+
+    .principale {
+        padding: 5px;
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+
+    .header-contenu {
+        background: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.322)), url(image/fond/principale-img.jpg);
+        background-position: top;
+        background-size: cover;
+        padding: 30px 4%;
+        min-height: 60vh;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    .nav-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .nav-link-contanaire.active {
+        background: rgba(0, 0, 0, 0.486);
+        width: 100%;
+        min-height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 200;
+        transition: display 0.5s;
+    }
+
+    .nav-links {
+        background: linear-gradient(rgba(94, 114, 85, 0.781), rgba(88, 87, 87, 0.596)), url(image/fond/fondu\ \(2\).jpeg);
+        justify-content: center;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        gap: 40px;
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        width: 70%;
+        min-height: 100vh;
+        transition: transform 0.5s;
+        transform: translateX(400px);
+        padding-left: 10px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+
+    .nav-links .les-liens {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .nav-links .les-liens li a {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        position: relative;
+    }
+
+
+    .nav-links .subcribs {
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        background-color: green;
+        transition: 0.6s background;
+    }
+
+    .nav-links .subcribs:hover {
+        background-color: black;
+        color: white;
+    }
