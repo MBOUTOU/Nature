@@ -328,8 +328,82 @@ iframe{
 }
 
 
+/* la partie du footer de la page */
+.pied-page{
+     background-color: rgba(0, 128, 0, 0.555);
+     border-radius: 20px 20px 0 0;
+     padding: 30px 5%;
+     position: relative;
+}
 
+.footer-sous{
+    display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     gap: 30px;
+     padding: 10px;
+}
 
+.blache-ffoter{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: #3333;
+    color: black;
+}
+
+.footer-element img{
+   max-width: 110px;
+   max-height: 110px;
+   border-radius: 50%;
+}
+
+.footer-liens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-liens li a{
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.abonne{
+ padding: 12px 20px;
+ background-color: white;
+ color: black;
+ border-radius: 10px;
+ transition: 0.3s ;
+}
+
+.abonne:hover{
+ background-color: black;
+ color: white;
+}
+
+.footer-social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-social-media li a i{
+  font-size: 30px;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-social-media li a i:nth-child(1):hover{
+    color: blue ;
+}
 
 
 
