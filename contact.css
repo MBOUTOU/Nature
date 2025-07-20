@@ -45,7 +45,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .nav-logo img {
@@ -146,12 +146,124 @@ body{
 }
 
 
+/* la partie des elements des formulaire */
+.section-contenu-contact{
+  padding: 50px 3%;
+}
+
+.form-newslater{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.partieformulaire{
+  width: 600px;
+  max-width: 100%;
+}
+
+.sousform{
+  display: flex;
+  gap: 10px;
+}
+
+.partieformulaire input{
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: rgba(56, 161, 96, 0.555);
+}
+
+#textearea{
+  height: 150px;
+  width: 100%;
+  border-radius: 20px;
+   background-color: rgba(56, 161, 96, 0.555);
+  padding: 20px;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  border: none;
+ font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.btnformulaire{
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  cursor: pointer;
+  color:  white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+}
+
+.partienewslater{
+ background-color: rgba(56, 161, 96, 0.555);
+ border-radius: 20px;
+ padding: 30px;
+ flex-wrap: wrap;
+ max-width: 500px;
+}
+
+.partienewslater h2{
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+}
+
+.partienewslater p{
+  margin-bottom: 20px;
+}
 
 
+.partienewslater input{
+ padding: 12px 20px;
+ width: 100%;
+ margin-bottom: 10px;
+ border-radius: 20px;
+ font-family: "Poppins", sans-serif;
+ font-style: normal;
+ outline: none;
+ border: none;
+ font-size: 15px;
+ font-weight: 500;
+}
 
+.btn-newslater{
+  padding: 12px 20px;
+  width: 100%;
+ border-radius: 20px;
+ border: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  cursor: pointer;
+  color:  white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: green;
+  transition: 0.4s ease-in-out;
+}
 
-
-
+.btn-newslater:hover{
+  transform: scale(1.02);
+}
 
 
 
