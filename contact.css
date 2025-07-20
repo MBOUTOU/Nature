@@ -382,10 +382,6 @@ body{
 /* la partie des mes formulaires de contacte */
 
 .form-newslater{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
   flex-direction: column-reverse;
 }
