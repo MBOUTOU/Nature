@@ -178,24 +178,22 @@ body{
   border-radius: 20px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  outline: none;
+  outline:  1px solid #333;
   border: none;
   color: black;
   font-size: 16px;
   margin-bottom: 10px;
-  background-color: rgba(56, 161, 96, 0.555);
 }
 
 #textearea{
   height: 150px;
   width: 100%;
   border-radius: 20px;
-   background-color: rgba(56, 161, 96, 0.555);
   padding: 20px;
   outline: none;
   resize: none;
   font-size: 16px;
-  border: none;
+  border: 1px solid #333;
  font-family: "Poppins", sans-serif;
   font-style: normal;
 }
