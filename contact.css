@@ -249,6 +249,10 @@ body{
  font-weight: 500;
 }
 
+.new{
+  /* concerne l'aniimation de mes elemeent btn et input */
+}
+
 .btn-newslater{
   padding: 12px 20px;
   width: 100%;
