@@ -566,6 +566,41 @@ iframe{
         color: white;
 } 
 
+
+/* la partie links medias dans le menu */
+    .link-media {
+        display: block;
+        gap: 20px;
+        position: absolute;
+        bottom: 50px;
+        left: 45px;
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .link-media a {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link-media i {
+        font-size: 20px;
+        object-fit: cover;
+        color: white;
+        margin: 0 10px;
+    }
+
+
+
 /* la partie du button de menu */
 .menu-navigation{
   width: 25px;
@@ -644,12 +679,27 @@ transition: transform 0.3s ease-in-out,
 
 @media (max-width: 360px) {
   
+
 /* la partie des mes formulaires de contacte */
 
 .title-header{
   font-size: 50px;
   line-height: 55px;
 }
+
+
+
+
+/* la partie links medias dans le menu */
+    .link-media {
+        bottom: 50px;
+        left: 15px;
+        padding: 10px;
+    }
+
+    .social-media {
+        gap: 15px;
+    }
 
 .sous-prince p{
   font-size: 15px;
