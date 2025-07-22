@@ -54,3 +54,17 @@ sr.reveal(".contenaire-ifraiem", {
    origin: "bottom",
 })
 
+// la partie des elements de mon bouton 
+
+const Menuhumberger = document.querySelector(".menu-navigation");
+const menu = document.querySelector(".nav-links ")
+const bodyStyle =document.querySelector("body")
+const parentLinks =document.querySelector(".nav-link-contanaire")
+
+   Menuhumberger.addEventListener("click", () =>{
+      Menuhumberger.classList.toggle("active");
+      menu.classList.toggle("active")
+      bodyStyle.classList.toggle("active")
+      parentLinks.classList.toggle("active")
+   })
+  
