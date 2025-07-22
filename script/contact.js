@@ -48,3 +48,9 @@ sr.reveal(".box-infor", {
    delay: 200,
 })
 
+
+sr.reveal(".contenaire-ifraiem", {
+   distance: "50px", 
+   origin: "bottom",
+})
+

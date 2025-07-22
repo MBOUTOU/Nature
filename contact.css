@@ -592,7 +592,7 @@ iframe{
 
 
 .partieformulaire input{
-  padding: 15px 20px;
+  padding: 12px 12px;
   font-size: 15px;
 }
 
@@ -604,16 +604,14 @@ iframe{
 
 
 .btnformulaire{
-  padding: 15px 25px;
+  padding: 15px 20px;
   border-radius: 20px;
-  border: none;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  cursor: pointer;
-  color:  white;
   font-size: 16px;
-  font-weight: 500;
-  background-color: black;
+  font-weight: 600;
 }
 
+.partienewslater input{
+ padding: 12px 12px;
+ font-size: 15px;
+}
 }
