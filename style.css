@@ -952,7 +952,7 @@ position: relative;
     .line {
         position: absolute;
         transition: transform 0.3s ease-in-out,
-            opacity 0.2s ease-out;
+        opacity 0.2s ease-out;
     }
 
     .L1 {

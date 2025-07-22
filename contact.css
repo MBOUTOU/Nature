@@ -110,9 +110,37 @@ body{
     display: none;
 }
 
-/* la patie de la navigation menu*/
-.menu-navigation{
-  display: none;
+/* la partie du menu deroulant */
+.menu-navigation {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: transparent;
+    top: 60px;
+    right: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.L1 {
+    transform: translateY(-10px);
+}
+
+.L3 {
+    transform: translateY(10px);
 }
 
 /* la partie du texte pricipale de ma page */
@@ -442,6 +470,7 @@ iframe{
 
     .principale {
         padding: 5px;
+        position: relative;
     }
 
     body.active {
@@ -537,6 +566,46 @@ iframe{
         color: white;
 } 
 
+/* la partie du button de menu */
+.menu-navigation{
+  width: 25px;
+  height: 25px;
+  right: 35px;
+  top: 40px;
+  visibility: visible;
+}
+
+.line{
+position: absolute;
+transition: transform 0.3s ease-in-out, 
+  opacity 0.2s ease-in-out;
+}
+
+.L1{
+   transform: translateY(-10px);
+}
+
+.L2{
+   
+}
+
+.L3{
+  transform: translateY(10px);
+}
+.menu-navigation.active .L1{
+   transform: translate(0) rotate(135deg);
+   background-color: white;
+}
+
+.menu-navigation.active .L2{
+   opacity: 0;
+}
+
+.menu-navigation.active .L3{
+  transform: translate(0) rotate(-135deg);
+  background-color: white;
+}
+
 /* la partie des mes formulaires de contacte */
 
 .title-header{
@@ -566,6 +635,16 @@ iframe{
 }
 
 }
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 360px) {
   
