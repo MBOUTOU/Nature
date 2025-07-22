@@ -539,6 +539,18 @@ iframe{
 
 /* la partie des mes formulaires de contacte */
 
+.title-header{
+  font-size: 60px;
+  color: white;
+  line-height: 55px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+  margin-bottom: 20px;
+}
+
 .form-newslater{
   gap: 30px;
   flex-direction: column-reverse;
@@ -553,7 +565,55 @@ iframe{
   box-shadow: 0 4px 12px rgba(107, 107, 107, 0.15);
 }
 
+}
+
+@media (max-width: 360px) {
+  
+/* la partie des mes formulaires de contacte */
+
+.title-header{
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.sous-prince p{
+  font-size: 15px;
+}
+
+.form-newslater{
+  gap: 30px;
+  flex-direction: column-reverse;
+}
+
+.box-infor{
+  padding: 45px 30px 25px 30px;
+  width: 100%;
+}
 
 
+.partieformulaire input{
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+#textearea{
+  height: 130px;
+  padding: 15px;
+  font-size: 15px;
+}
+
+
+.btnformulaire{
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  cursor: pointer;
+  color:  white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+}
 
 }
