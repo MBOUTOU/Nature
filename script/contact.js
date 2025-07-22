@@ -38,7 +38,6 @@ sr.reveal(".partienewslater p", {
 sr.reveal(".new", {
    distance: "50px", 
    origin: "bottom",
-   delay: 200,
 })
 
 
