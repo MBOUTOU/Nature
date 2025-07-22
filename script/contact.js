@@ -19,6 +19,11 @@ sr.reveal(".partienewslater", {
    origin: "bottom",
 })
 
+sr.reveal(".partieformulaire", {
+   distance: "50px", 
+   origin: "bottom",
+})
+
 sr.reveal(".partienewslater h2", {
    distance: "50px", 
    origin: "bottom",
@@ -33,6 +38,13 @@ sr.reveal(".partienewslater p", {
 sr.reveal(".new", {
    distance: "50px", 
    origin: "bottom",
-   delay: 210,
+   delay: 200,
+})
+
+
+sr.reveal(".box-infor", {
+   distance: "50px", 
+   origin: "bottom",
+   delay: 200,
 })
 
