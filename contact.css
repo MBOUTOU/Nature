@@ -225,7 +225,6 @@ body{
   border: 2px solid #33333377;
  font-family: "Poppins", sans-serif;
   font-style: normal;
-  overflow:  hidden;
 }
 
 .btnformulaire{
@@ -663,6 +662,15 @@ transition: transform 0.3s ease-in-out,
   max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(107, 107, 107, 0.15);
+}
+
+/* la partie du formulaire element  */
+
+#textearea{
+ margin-bottom: 10px;
+}
+.btnformulaire{
+  width: 100%;
 }
 
 }
