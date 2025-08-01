@@ -44,7 +44,6 @@ sr.reveal(".new", {
 sr.reveal(".box-infor", {
    distance: "50px", 
    origin: "bottom",
-   delay: 200,
 })
 
 
@@ -68,3 +67,10 @@ const parentLinks =document.querySelector(".nav-link-contanaire")
    })
   
 // la partie de mon formulaire de contact et abonnement 
+const formulaire = document.querySelectorAll(".form")
+
+formulaire.forEach((form) =>{
+   form.addEventListener("submit", (e) =>{
+      e.preventDefault();
+   })
+})

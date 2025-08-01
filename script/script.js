@@ -36,23 +36,31 @@ sr.reveal(".cat-produit", {
 
 sr.reveal(".boite",{
     distance:"65px",
-    interval: 200,
+    interval: 150,
 })
 
+// le reveal des conseils
 sr.reveal(".title-contact",{
     distance:"65px",
 })
 
 sr.reveal(".title-paragraphe",{
     distance:"65px",
-    delay: 300,
+    delay: 220,
 })
 
 sr.reveal(".title-lien-contact",{
     distance:"65px",
-    delay: 350,
+    delay: 230,
 })
 
+// le card des commentaire 
 sr.reveal(".title-commentaire",{
     distance:"50px",
 })
+
+sr.reveal(".card-commentaire",{
+    distance:"50px",
+    delay: 200,
+})
+
