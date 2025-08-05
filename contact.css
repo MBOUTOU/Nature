@@ -755,6 +755,10 @@ transition: transform 0.3s ease-in-out,
 }
 
 /* la partie du formulaire element  */
+.partieformulaire{
+  background-color: unset;
+  margin-bottom: 25px;
+}
 
 .partienewslater input{
  padding: 12px 25px;
