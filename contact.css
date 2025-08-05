@@ -235,7 +235,7 @@ body{
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(0, 128, 0, 0.452);
+  background-color: #228B22;
   color: white;
 }  
 
@@ -267,7 +267,7 @@ body{
    height: 40px;
    width: 40px;
    border-radius: 10px;
-   background-color: rgba(0, 128, 0, 0.452);
+   background-color: #228B22;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -332,7 +332,7 @@ body{
 .btnformulaire{
   width: 100%;
   padding: 12px 20px;
-  background-color: green;
+  background-color: #228B22;
   color: white;
   border-radius: 10px;
   border: none;
@@ -800,13 +800,16 @@ transition: transform 0.3s ease-in-out,
   padding: 0;
 }
 
-
-
+.element h4{
+  font-size: 16px;
+}
+.element p{
+  font-size: 14px;
+}
 
 
 /* la partie du footer de la page */
 .pied-page{
-     /* background-color: rgba(0, 128, 0, 0.555); */
      padding: 30px 0 0 0;
      position: relative;
 }
@@ -940,11 +943,65 @@ align-items: center;
 
 
 .btnformulaire{
-  padding: 15px 20px;
-  border-radius: 20px;
+  padding: 10px 12px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
 }
+
+
+/* la partie des infos */
+.information-contact{
+  max-width: 100%;
+  padding: 0;
+}
+
+.infos-texte-header h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.infos-texte-header h2 span{
+   color: green;
+}
+
+.infos-texte-header p{
+    margin-bottom: 20px;
+    padding-right: 0;
+    font-size: 14px;
+}
+
+.element-contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box-infor{
+  gap: 20px;
+  padding: 0;
+}
+
+.element h4{
+  font-size: 16px;
+}
+.element p{
+  font-size: 14px;
+}
+
+.icone-infos li{
+   height: 30px;
+   width: 30px;
+   border-radius: 10px;
+   line-height: 0;
+}
+
+.icone-infos li a{
+  color: white;
+  font-size: 16px;
+}
+
 
 /* la partie du footer de la page */
 .pied-page{
