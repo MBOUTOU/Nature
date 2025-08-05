@@ -409,7 +409,6 @@ iframe{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 2px solid #3333;
@@ -485,7 +484,6 @@ align-items: center;
  border: 1px solid #3333;
 font-family: "Poppins", sans-serif;
 font-style: normal;
-scroll-behavior: smooth;
 border-radius: 10px;
 }
 
@@ -784,7 +782,6 @@ transition: transform 0.3s ease-in-out,
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 20px;
-  background-color: wheat;
   border-bottom: 2px solid #3333;
   padding-inline: 2%;
 }
@@ -819,7 +816,6 @@ align-items: center;
 
 #form{
   width: 240px;
-  background-color: white;
   padding: 5px;
 }
 
@@ -935,9 +931,9 @@ align-items: center;
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 20px;
-  background-color: wheat;
   border-bottom: 2px solid #3333;
-  padding-inline: 2%;
+  padding-inline: 3%;
+  gap: 20px;
 }
 
 .left-block-footer a{
@@ -952,9 +948,6 @@ align-items: center;
   border-radius: 50%;
 }
 
-.right-block-footer{
-  gap: 20px;
-}
 
 .icone-footer-infos li{
    line-height: 0;
@@ -969,9 +962,13 @@ align-items: center;
 }
 
 #form{
-  width: 240px;
-  background-color: white;
+  width: 100%;
   padding: 5px;
+}
+
+#form input{
+ width: 69%;
+ border-radius: 10px;
 }
 
 .subcribs-footer{
@@ -991,7 +988,7 @@ align-items: center;
 /* la partie du bas qui contient les deux boites */
 .bottom-block{
   gap: 20px;
-  padding:  30px 2% 0 2%;
+  padding:  30px 3% 0 3%;
 }
 
 .commun-footer{
