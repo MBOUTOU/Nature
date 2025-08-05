@@ -767,6 +767,42 @@ transition: transform 0.3s ease-in-out,
   width: 100%;
 }
 
+/* la partie des infos */
+.information-contact{
+  max-width: 100%;
+  padding: 0;
+}
+
+.infos-texte-header h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.infos-texte-header h2 span{
+   color: green;
+}
+
+.infos-texte-header p{
+    margin-bottom: 20px;
+    padding-right: 0;
+    font-size: 14px;
+}
+
+.element-contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box-infor{
+  gap: 20px;
+  padding: 0;
+}
+
+
+
+
 
 /* la partie du footer de la page */
 .pied-page{
@@ -820,16 +856,9 @@ align-items: center;
 }
 
 .subcribs-footer{
-  padding: 10px 12px;
-  font-size: 14px;
-  border: none;
-  background-color: #228B22;
-  cursor: pointer;
-  color: white;
+  padding: 10px 15px;
+  font-size: 15px;
   border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  scroll-behavior: smooth;
   font-weight: 500;
 }
 
