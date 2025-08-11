@@ -250,10 +250,16 @@ body{
   font-weight: 500;
 }
 
+/* les liens media de contact */
 .liens-medias{
-  margin-top: 20px;
+  margin-top: 30px;
   border-top: 2px solid #3333;
   padding: 10px 0;
+}
+
+.liens-medias h3{
+   font-size: 20px;
+   font-weight: 500;
 }
 
 .icone-infos{
@@ -285,7 +291,7 @@ body{
   max-width: 100%;
   background-color: rgb(247, 244, 244);
   border-radius: 10px;
-   padding: 10px;
+  padding: 10px;
 }
 
 .form-control{
@@ -293,6 +299,11 @@ body{
   margin-bottom: 5px;
   position: relative;
   padding-bottom: 20px;
+}
+
+
+label{
+  padding-left: 10px;
 }
 
 .form-control input{
@@ -304,6 +315,7 @@ body{
   outline: none; 
   border-radius: 10px;
   border: 2px solid #3333;
+  margin-top: 5px;
 }
 
 .form-control.success input{
@@ -327,6 +339,7 @@ body{
   width: 100%;
   resize: none;
   border: 2px solid #3333;
+  margin-top: 5px;
 }
 
 .btnformulaire{
@@ -341,11 +354,6 @@ body{
   font-style: normal;
   cursor: pointer;
   font-size: 16px;
-}
-
-label{
-  padding-left: 5px;
-  margin-bottom: 5px;
 }
 
 .form-control i{
@@ -754,23 +762,6 @@ transition: transform 0.3s ease-in-out,
   background-color: white;
 }
 
-/* la partie du formulaire element  */
-.partieformulaire{
-  background-color: unset;
-  margin-bottom: 25px;
-}
-
-.partienewslater input{
- padding: 12px 25px;
-}
-
-#textearea{
- margin-bottom: 10px;
-}
-.btnformulaire{
-  width: 100%;
-}
-
 /* la partie des infos */
 .information-contact{
   max-width: 100%;
@@ -810,6 +801,37 @@ transition: transform 0.3s ease-in-out,
 .element p{
   font-size: 14px;
 }
+
+
+/* les liens media de contact */
+.liens-medias{
+  margin-top: 30px;
+  padding: 0;
+}
+
+.liens-medias .medias{
+display: none;
+}
+
+
+/* la partie du formulaire element  */
+.partieformulaire{
+  background-color: unset;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.partienewslater input{
+ padding: 12px 25px;
+}
+
+#textearea{
+ margin-bottom: 10px;
+}
+.btnformulaire{
+  width: 100%;
+}
+
 
 
 /* la partie du footer de la page */
