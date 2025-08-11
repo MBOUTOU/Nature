@@ -2091,8 +2091,8 @@ align-items: center;
  position: relative;
  margin-bottom: 70px;
 }
+
 /* les images de la categorie */
- 
 .block-left{
     display: flex;
     align-items: center;
@@ -2248,7 +2248,6 @@ align-items: center;
 
 /* la partie du footer de la page */
 .pied-page{
-     /* background-color: rgba(0, 128, 0, 0.555); */
      padding: 30px 0 0 0;
      position: relative;
 }
@@ -2292,12 +2291,13 @@ align-items: center;
 
 #form{
   width: 100%;
-  padding: 5px;
+  padding: 0px;
 }
 
 #form input{
  width: 69%;
  border-radius: 10px;
+ margin-right: 5px;
 }
 
 .subcribs-footer{
