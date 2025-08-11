@@ -1519,7 +1519,6 @@ font-weight: 500;
 
 .box-commentaire {
     display: flex;
-    overflow-x: auto;
     align-items: unset;
     justify-content: unset;
     width: 100%;
@@ -1564,14 +1563,15 @@ font-weight: 500;
 }
 
 .top-block{
-  display: flex;
+display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 2px solid #3333;
-  padding-inline: 2%;
+  padding-inline: 3%;
+  gap: 20px;
 }
 
 .left-block-footer a{
@@ -1599,24 +1599,38 @@ align-items: center;
 }
 
 .icone-footer-infos li a{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #form{
-  width: 240px;
-  padding: 5px;
+  width: 100%;
+  padding: 0px;
+}
+
+#form input{
+ width: 70%;
+ border-radius: 10px;
+ margin-right: 10px;
 }
 
 .subcribs-footer{
-  padding: 10px 15px;
+  padding: 10px 12px;
   font-size: 15px;
+  border: none;
+  background-color: #228B22;
+  cursor: pointer;
+  color: white;
   border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
   font-weight: 500;
 }
 
 /* la partie du bas qui contient les deux boites */
 .bottom-block{
   gap: 30px;
+  padding: 20px 3% 0 3%;
 }
 
 .commun-footer{
@@ -1628,16 +1642,17 @@ align-items: center;
 }
 
 .bottom-title-empl{
-  margin-left: 20px;
+  margin-left: 42px;
   left: unset;
   border-radius: 10px;
 }
 
 .bottom-title-const{
-  margin-left: 30px;
+  margin-left: 50px;
   left: unset;
   border-radius: 10px;
 }
+
 
 }
 
