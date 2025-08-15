@@ -68,3 +68,69 @@ const parentLinks =document.querySelector(".nav-link-contanaire")
   
 // la partie de mon formulaire de contact et abonnement 
 
+const formulaire = document.getElementById("form-1");
+const Username = document.getElementById("username");
+const Email = document.getElementById("email")
+const Texearea = document.getElementById("textearea");
+
+formulaire.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    CheckInput();
+   if(Validform()){
+      SuccesAlert();
+   }
+})
+
+function Validform () {
+   const UsernameValue = Username.value.trim();
+   const EmailValue = Email.value.trim();
+   const TexteareaValue = Texearea.value.trim();
+
+     return (
+        UsernameValue !== "" &&
+        EmailValue !== "" &&
+        IsEmail(EmailValue) &&
+        TexteareaValue !== ""
+    );
+}
+
+
+function CheckInput () {
+   const UsernameValue = Username.value.trim();
+   const EmailValue = Email.value.trim();
+   const TexteareaValue = Texearea.value.trim();
+   
+   if(UsernameValue === ""){
+      SetErrorFor(Username, "usernane can't be blank")
+   }else{
+     SetSuccessFor(Username)
+   }
+   if(EmailValue ===""){
+      SetErrorFor(Email, "Email can't be blank");
+   }else if(!IsEmail(EmailValue)){
+       SetErrorFor(Email, "not a valid email")
+   }else{
+      SetSuccessFor(Email);
+   }
+   if(TexteareaValue=== ""){
+      SetErrorFor(Texearea, "textarea can't be blank")
+   }else{
+      SetSuccessFor(Texearea);
+   }
+}
+
+function SetErrorFor (input, message){
+   const formcontrol = input.parentElement;
+   const small = formcontrol.querySelector("small")
+   formcontrol.className = "form-control error";
+   small.innerText = message;
+} 
+
+function IsEmail (Email){
+ 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(Email);
+}
+
+function SetSuccessFor ( input){
+    const formControl = input.parentElement;
+    formControl.className= "form-control success"
+}

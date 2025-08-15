@@ -303,7 +303,7 @@ body{
 
 
 label{
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .form-control input{
@@ -320,12 +320,10 @@ label{
 
 .form-control.success input{
     border-color: #2ecc71;
-    visibility: hidden;
 }
 
 .form-control.error input{
   border-color: #e74c3c;
-  visibility: hidden;
 }
 
 #textearea{
@@ -340,6 +338,14 @@ label{
   resize: none;
   border: 2px solid #3333;
   margin-top: 5px;
+}
+
+.form-control.error #textearea{
+    border-color: #e74c3c;
+}
+
+.form-control.success #textearea{
+    border-color: #3333;
 }
 
 .btnformulaire{
@@ -359,7 +365,7 @@ label{
 .form-control i{
   position: absolute;
   right: 20px;
-  top: 40px;
+  top: 45px;
   visibility: hidden;
 }
 
@@ -370,7 +376,7 @@ label{
 
 .form-control.error i.fa-exclamation-circle{
   color: #e74c3c;
-	visibility: hidden;
+	visibility: visible;
 }
 
 small{
@@ -381,6 +387,9 @@ small{
 	visibility: hidden;
 }
 
+.form-control.error small{
+  visibility: visible;
+}
 
 
 
@@ -408,7 +417,6 @@ iframe{
 
 /* la partie du footer de la page */
 .pied-page{
-     /* background-color: rgba(0, 128, 0, 0.555); */
      padding: 30px 0 0 0;
      position: relative;
 }
@@ -930,8 +938,6 @@ align-items: center;
   left: unset;
   border-radius: 10px;
 }
-
-
 
 }
 
