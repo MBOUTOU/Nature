@@ -81,6 +81,22 @@ formulaire.addEventListener("submit", (e)=>{
    }
 })
 
+
+function SetErrorFor (input, message){
+   const formcontrol = input.parentElement;
+   const small = formcontrol.querySelector("small")
+   formcontrol.className = "form-control error";
+   small.innerText = message;
+} 
+
+function IsEmail (Email){
+ 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(Email);
+}
+
+function SetSuccessFor ( input){
+    const formControl = input.parentElement;
+    formControl.className= "form-control success"
+}
 function Validform () {
    const UsernameValue = Username.value.trim();
    const EmailValue = Email.value.trim();
@@ -92,6 +108,15 @@ function Validform () {
         IsEmail(EmailValue) &&
         TexteareaValue !== ""
     );
+}
+
+function SuccesAlert () {
+   swal.fire({
+      icon :"success",
+      title: "Merci",
+      html: `Votre message a bien été envoyé`,
+      timer: "3000",
+   })
 }
 
 
@@ -117,20 +142,4 @@ function CheckInput () {
    }else{
       SetSuccessFor(Texearea);
    }
-}
-
-function SetErrorFor (input, message){
-   const formcontrol = input.parentElement;
-   const small = formcontrol.querySelector("small")
-   formcontrol.className = "form-control error";
-   small.innerText = message;
-} 
-
-function IsEmail (Email){
- 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(Email);
-}
-
-function SetSuccessFor ( input){
-    const formControl = input.parentElement;
-    formControl.className= "form-control success"
 }

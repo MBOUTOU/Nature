@@ -834,10 +834,11 @@ display: none;
 }
 
 #textearea{
- margin-bottom: 10px;
 }
+
 .btnformulaire{
   width: 100%;
+  margin-top: 10px;
 }
 
 
