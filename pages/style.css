@@ -284,8 +284,8 @@ transition: 0.3s;
 .shar-links-social-media{
   background-color: rgba(81, 163, 113, 0.116); 
   border-radius: 20px;
-  padding: 20px 20px;
-  max-width: 100%;
+  padding: 20px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -298,52 +298,30 @@ transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 15px;
+  gap: 25px;
   padding-left: 30px;
 }
 
-.links-parent li a{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.links-parent .tag-liens{
+  line-height: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.links-parent li {
-  border-radius: 50%;
-}
-
-.links-parent li:nth-child(1):hover{
- background-color: rgba(0, 0, 255, 0.568);
-}
-
-.links-parent li:nth-child(1):hover i{
-   color: white;
-}
-
-.links-parent li:nth-child(2):hover{
-   background-color: violet;
-}
-
-.links-parent li:nth-child(2):hover i{
-   color: white;
-}
-
-.links-parent li:nth-child(3):hover{
-   background-color: rgba(35, 160, 35, 0.521);
-}
-
-.links-parent li:nth-child(3):hover i{
-   color: white;
+  justify-content:center;
+  line-height: 0;
+  background-color: blue;
 }
 
 .links-parent li a i{
  font-size: 20px;
- color: #333;
+ color:  #333;
  font-weight: 500;
+}
+
+.facebook:hover{
+  background-color: blue;
 }
 
 /* la partie de la description des elements */
@@ -1182,6 +1160,39 @@ align-items: center;
    height: 90px;
    object-fit: cover;
  }
+
+/* la partie en blue-ciel pour les ingredients */
+
+.detail-block-naturel-icone{
+  border-radius: 20px;
+  background-color: rgba(81, 163, 113, 0.116); 
+  padding: 20px 20px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.sous-parent{
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+.sous-parent li{
+ display: flex;
+ align-items: center;
+ gap: 15px;
+}
+
+.sous-parent li p{
+   font-size: 12px;
+}
+
+.sous-parent li i{
+   font-size: 18px;
+   color: green;
+}
+
 
 
 /* la partie de la description des elements */
