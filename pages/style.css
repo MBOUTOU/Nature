@@ -69,44 +69,29 @@ html,body{
 
 .details-produit{
     display: flex;
-    gap: 50px;
+    gap: 40px;
     width: 100%;
     align-items: start;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 /* la partie de l'image */
 .detail-image{
    display: flex;
-   align-items: center;
-   gap: 20px;
-   flex-direction: column;
+   align-items: start;
    justify-content: center;
-   padding: 15px 0 10px 0;
    border-radius: 20px;
-   border: 1px dashed #3333;
-   width: 530px;
+   width: 600px;
+   height: 570px;
 }
 
  .main-image{
-    width: 480px;
+    width: 100%;
     border-radius: 20px;
     object-fit: cover;
-    height: 450px;
- }
-
- .main-image.active{
-   animation: Transition 0.4s ease-in-out;
- }
-
- @keyframes Transition {
-    from{
-      opacity: 0.3; 
-    }
-    to{
-      opacity: 1;
-    }
+    height: 100%;
  }
 
  .imagePricipale{
@@ -116,35 +101,10 @@ html,body{
     height: 100%;
  }
 
- .petite-image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
- }
- 
- 
- .button-change-image{
-  cursor: pointer;
-  transition: transform 0.8s;
- }
-
- .button-change-image:hover{
-    transform: translateY(-5px);
- }
-
- .letter-image{
-   border-radius: 30px;
-   width: 110px;
-   height: 110px;
-   object-fit: cover;
- }
-
 
  /* la partie de droite qui contient les infos*/
 .detail-tout{
-  /* background-color: rgba(56, 161, 96, 0.253); */
-  width: 570px;
+  width: 530px;
 }
 
 .detail-tout h1{
@@ -239,29 +199,27 @@ html,body{
   margin-bottom: 15px;
 }
 
-.effect{
-transition: 0.3s;
-}
-
-.effect:hover{
- background-color: black;
- color: white;
-}
-
-.btn1,
 .btn2{
   padding: 12px 20px;
   background-color: rgba(55, 218, 55, 0.973);
   color: white;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
+  max-width: 400px;
+  width: 200px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn2:hover{
+  background-color: black;
+  color: white;
 }
 
 .btn3{
-  padding: 12px 15px;
+  padding: 15px;
   background-color: rgba(55, 218, 55, 0.973);
   color: black;
   border-radius: 10px;
@@ -306,11 +264,15 @@ transition: 0.3s;
   width: 35px;
   height: 35px;
   border-radius: 10px;
+}
+
+.links-parent li a{
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content:center;
   line-height: 0;
-  background-color: blue;
 }
 
 .links-parent li a i{
@@ -320,7 +282,35 @@ transition: 0.3s;
 }
 
 .facebook:hover{
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.774);
+}
+
+.facebook:hover a i{
+   color:  white;
+}
+
+.instagram:hover{
+  background-color: violet;
+}
+
+.instagram:hover a i{
+  color: white;
+}
+
+.whatsapp:hover{
+  background-color: #27a027; ;
+}
+
+.whatsapp:hover a i{
+  color: white;
+}
+
+.tiktok:hover{
+  background-color: black;
+}
+
+.tiktok:hover a  i{
+  color: white;
 }
 
 /* la partie de la description des elements */
@@ -449,51 +439,50 @@ transition: 0.3s;
 /* les images similaires avec le produit */
 .image-similaire{
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  padding: 10px 0 20px 0;
-}
-
-.sous-contenaire-similaire{
-    width: 95%;
-    position: relative;
-    background-color: rgba(81, 163, 113, 0.116); 
-    border-radius: 20px;
-    padding: 100px 10px 20px 10px;
 }
 
 .title-image-similaire{
-  background-color: white;
-  width: 90%;
-  border-radius: 20px;
-  padding: 10px;
-  position: absolute;
-  top: -30px;
-  left: 50px;
+  margin-bottom: 80px;
   display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: center;  
-  box-shadow: -7px 5px 15px #52515133;
+  justify-content: center;
 }
 
-.title-image-similaire  h2 {
+.title-image-similaire h2 {
     font-weight: bold;
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
+    position: relative;
+}
+
+.title-image-similaire h2::before{
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 300px;
+   background-image: url(../logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: 0;
 }
 
 .title-image-similaire h2 span{
     font-weight: bold;
     color:  green;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-
 
 .block-img{
   display: flex;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -755,45 +744,32 @@ font-weight: 500;
 
 .details-produit{
     display: flex;
-    gap: 50px;
+    gap: 40px;
     width: 100%;
     align-items: start;
     justify-content: center;
-    /* background-color: yellow; */
     flex-wrap: wrap;
 }
 
 /* la partie de l'image */
-.detail-image{
+
+  .detail-image{
    display: flex;
    align-items: center;
-   gap: 20px;
    flex-direction: column;
    justify-content: center;
-   padding: 15px 0;
+   padding: 10px;
    border-radius: 20px;
    border: 1px dashed #3333;
    width: 100%;
+   height: 370px;
 }
 
  .main-image{
     width: 360px;
     height: 360px;
  }
- 
- .petite-image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
- }
- 
- .letter-image{
-   border-radius: 30px;
-   width: 100px;
-   height: 100px;
-   object-fit: cover;
- }
+
 
 /* la partie de la description des elements */
 
@@ -879,19 +855,38 @@ font-weight: 500;
 /* la partie des images similaires */
 
 .image-similaire{
-  padding: 10px 0 20px 0;
+
 }
 
 .title-image-similaire{
-  top: -20px;
-  left: 18px;
-  padding: 5px;
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  width: unset;
+  justify-content: center;
 }
 
-.title-image-similaire  h2 {
+
+.title-image-similaire h2 {
     font-weight: bold;
     color: black;
-    font-size: 20px;
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    position: relative;
+}
+
+.title-image-similaire h2::before{
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 300px;
+   background-image: url(../logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: 0;
 }
 
 .block-img{
@@ -1125,36 +1120,34 @@ align-items: center;
 
 /*  */
 @media  (max-width: 360px) {
-    /* image principale*/
+  
+  /* image principale*/
+.details-produit{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
   .detail-image{
    display: flex;
    align-items: center;
-   gap: 20px;
    flex-direction: column;
    justify-content: center;
-   padding: 10px 10px;
+   padding: 10px;
    border-radius: 20px;
    border: 1px dashed #3333;
    width: 100%;
+   height: 340px;
 }
  .main-image{
     width: 320px;
     height: 320px;
  }
  
- .petite-image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
- }
- 
- .letter-image{
-   border-radius: 20px;
-   width: 90px;
-   height: 90px;
-   object-fit: cover;
- }
 
 /* la partie en blue-ciel pour les ingredients */
 
@@ -1289,34 +1282,46 @@ align-items: center;
   font-size: 12px;
 }
 
-
-/* la partie des images similaires */
-
+/* les images similaires avec le produit */
 .image-similaire{
-  padding: 10px 0 20px 0;
+  text-align: center;
 }
 
 .title-image-similaire{
-  top: -20px;
-  left: 18px;
-  padding: 5px;
+  position: relative;
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  width: unset;
+  justify-content: center;
 }
 
-.title-image-similaire  h2 {
-    font-weight: bold;
-    color: black;
-    font-size: 20px;
+.title-image-similaire h2 {
+    font-size: 30px;
+}
+
+.texte-commentaire h2::before {
+   content: "";
+   position: absolute;
+   height: 80px;
+   width: 150px;
+   background-image: url(logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: 0;
 }
 
 .block-img{
   gap: 10px;
   display: grid;
- grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .boite{
-    height: 180px;
-    width: 160px;
+    height: 165px;
+    width: 165px;
     position: relative;
     border-radius: 15px;
 }
@@ -1335,7 +1340,7 @@ align-items: center;
     border-radius: 10px;
     background-color:  rgb(250, 255, 250);
     bottom: -30px;
-    left: 9px;
+    left: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1355,7 +1360,7 @@ align-items: center;
 
 /* la partie du footer de la page */
 .pied-page{
-     padding: 30px 0 0 0;
+     padding: 5px 0 0 0;
      position: relative;
 }
 
