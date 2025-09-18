@@ -21,12 +21,12 @@ boutons.forEach((button) =>{
 
 // ---------------------------------------------------------
  
-document.addEventListener("DOMContentLoaded", (){
+document.addEventListener("DOMContentLoaded", () =>{
   const PageUrl = window.location.href;
 
-    // if(PageUrl.includes("localhost")){
-    //   PageUrl = "";
-    // }
+    if(PageUrl.includes("localhost")){
+      PageUrl = "";
+    }
 })
 
 
