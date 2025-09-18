@@ -19,7 +19,15 @@ boutons.forEach((button) =>{
    })
 })
 
+// ---------------------------------------------------------
+ 
+document.addEventListener("DOMContentLoaded", (){
+  const PageUrl = window.location.href;
 
+    // if(PageUrl.includes("localhost")){
+    //   PageUrl = "";
+    // }
+})
 
 
 

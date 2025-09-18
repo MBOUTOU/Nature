@@ -707,7 +707,7 @@ font-weight: 500;
   border: none;
   border-radius: 10px 10px 0 0;
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .card-information-generale{
@@ -719,22 +719,22 @@ font-weight: 500;
 
 .card-contente h3{
     margin-bottom: 7px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .card-contente p{
     margin-bottom: 20px;
-    font-size: 12px;
-}
-
-/* le card description */
-.description h3{
     font-size: 14px;
 }
 
 /* le card description */
+.description h3{
+    font-size: 16px;
+}
+
+/* le card description */
 .description p{
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -745,11 +745,11 @@ font-weight: 500;
 
 .card-LV h4{
    margin-bottom: 10px;
-   font-size: 14px;
+   font-size: 16px;
 }
 
 .card-LV p{
- font-size: 12px;
+ font-size: 14px;
 }
 
 .droite-LV img{
@@ -786,13 +786,13 @@ font-weight: 500;
 }
 
 .rembousement h4{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 550;
   margin-bottom: 15px;
 }
 
 .rembousement p{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 
