@@ -669,6 +669,35 @@ font-weight: 500;
   font-size: 12px;
 }
 
+.card-partage-and-like{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 15px;
+  padding: 20px 10px;
+  background-color: rgba(14, 28, 60, 0.05); 
+  flex-direction: unset;
+  border-radius: 10px;
+}
+
+
+.block-partage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 /* les informations des produits  */
 
 .produit-information{
@@ -862,11 +891,28 @@ align-items: center;
 
 
 .card-information-generale{
-   background-color: rgba(14, 28, 60, 0.05); 
-   padding: 25px 15px;
-   border-radius: 10px;
+   gap: 10px;
+   padding: 20px 5px;
+   align-items: center;
+   background-color: rgba(14, 28, 60, 0.05);
 }
 
+.block-partage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.block-partage li{
+  height: 35px;
+  width: 35px;
+}
+
+.partage i{
+    font-size: 20px;
+    color: rgb(66, 66, 66);
+}
 
 
 
