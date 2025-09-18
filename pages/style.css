@@ -252,9 +252,6 @@ animation: swiper 5s linear infinite;
 }
 
 /* le card description */
-.description{
-   
-}
 
 .recipient-information{
   margin-top: 10px;
@@ -719,12 +716,54 @@ font-weight: 500;
    border-radius: 10px;
 }
 
+
+.card-contente h3{
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.card-contente p{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+/* le card description */
+.description h3{
+    font-size: 14px;
+}
+
+/* le card description */
+.description p{
+    font-size: 12px;
+}
+
+
+/* le card livraison */
+.detaile-livraison {
+  
+}
+
+.card-LV h4{
+   margin-bottom: 10px;
+   font-size: 14px;
+}
+
+.card-LV p{
+ font-size: 12px;
+}
+
+.droite-LV img{
+  width: 100px;
+  height: 100px;
+}
+
 .content-livraison{
   margin: 20px 0;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(1, 1fr);
 }
+
 
 
 .rembousement{
@@ -739,13 +778,23 @@ font-weight: 500;
   background-color: rgba(150, 153, 158, 0.05); 
 }
 
-
 .Droite-rembours img{
    max-width: 100%;
    object-fit: cover;
    border-radius: 20px;
    height: 250px;
 }
+
+.rembousement h4{
+  font-size: 14px;
+  font-weight: 550;
+  margin-bottom: 15px;
+}
+
+.rembousement p{
+  font-size: 12px;
+}
+
 
 
 
