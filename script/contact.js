@@ -76,27 +76,12 @@ const Texearea = document.getElementById("textearea");
 formulaire.addEventListener("submit", (e)=>{
     e.preventDefault();
     CheckInput();
+
    if(Validform()){
       SuccesAlert();
    }
 })
 
-
-function SetErrorFor (input, message){
-   const formcontrol = input.parentElement;
-   const small = formcontrol.querySelector("small")
-   formcontrol.className = "form-control error";
-   small.innerText = message;
-} 
-
-function IsEmail (Email){
- 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(Email);
-}
-
-function SetSuccessFor ( input){
-    const formControl = input.parentElement;
-    formControl.className= "form-control success"
-}
 function Validform () {
    const UsernameValue = Username.value.trim();
    const EmailValue = Email.value.trim();
@@ -142,4 +127,20 @@ function CheckInput () {
    }else{
       SetSuccessFor(Texearea);
    }
+}
+
+function SetErrorFor (input, message){
+   const formcontrol = input.parentElement;
+   const small = formcontrol.querySelector("small")
+   formcontrol.className = "form-control error";
+   small.innerText = message;
+} 
+
+function IsEmail (Email){
+ 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(Email);
+}
+
+function SetSuccessFor ( input){
+    const formControl = input.parentElement;
+    formControl.className= "form-control success"
 }
