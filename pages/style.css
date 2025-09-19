@@ -124,8 +124,34 @@ animation: swiper 5s linear infinite;
  color: green;
 }
 
+/* la partie du bouton de commmande */
+
+.block-commande{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.com-_button{
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #228B22;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+
+/*la partie des elements de partage  */
 .card-partage-and-like{
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -666,6 +692,23 @@ font-weight: 500;
   font-size: 12px;
 }
 
+/* la partie du bouton de commmande */
+
+.block-commande{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.com-_button{
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*la partie des elements de partage  */
 .card-partage-and-like{
   margin-top: 20px;
   display: flex;
