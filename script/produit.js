@@ -22,57 +22,52 @@ boutons.forEach((button) =>{
 // ---------------------------------------------------------
  
 document.addEventListener("DOMContentLoaded", () =>{
-  const URldelapage = encodeURIComponent(window.location.href);
+  let PageUrl = window.location.href;
+
+  if(PageUrl.includes("localhost")){
+    PageUrl= "https://github.com/MBOUTOU/Nature/blob/master/pages/produit1.html";
+  }
+
+  const EncodeURl = encodeURIComponent(PageUrl)
   const MesaageProduit = document.getElementById("message-produit");
   const DataMessage = encodeURIComponent(MesaageProduit.dataset.message);
   
-  
-  function partagerSurFacebook() {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${URldelapage }`, '_blank', 'noopener,noreferrer');
+  function partagerSurFacebook(){
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${EncodeURl}`, '_blank', 'noopener,noreferrer');
   };
 
-  function partagerSurWhatsApp() {
-    window.open(`https://api.whatsapp.com/send?text=${DataMessage}%20${URldelapage }`, '_blank', 'noopener,noreferrer');
+  function partagerSurWhatsApp(){
+    window.open(`https://api.whatsapp.com/send?text=${DataMessage}%20${EncodeURl}`, '_blank', 'noopener,noreferrer');
   };
 
-  function ouvrirInstagram() {
-    window.open(`https://www.instagram.com/ton_nom_d_utilisateur/`, '_blank', 'noopener,noreferrer');
+  function ouvrirInstagram(){
+    window.open(`https://www.instagram.com/Clairwhy/?text=${EncodeURl}`, '_blank', 'noopener,noreferrer');
   };
 
-//  function partagerParGmail() {
-   
-// }
-
-  function ouvrirTikTok() {
-    window.open(`https://www.tiktok.com/@ton_nom_d_utilisateur`, '_blank');
-  }
-
+  function ouvrirTikTok(){
+    window.open(`https://www.tiktok.com/@ton_nom_d_utilisateur?text=${EncodeURl}`, '_blank');
+  };
 
 const BtnFacebook = document.querySelector(".bnt-Facebook");
 const BtnWhatsApp = document.querySelector(".btn-Whatsapp");
-const BtnMail = document.querySelector(".btn-Mail");
 const BtnTiktok = document.querySelector(".btn-tiktok");
-const BtnInstagram = document.querySelector(".btn-instagram")
+const BtnInstagram = document.querySelector(".btn-instagram");
 
 if(BtnFacebook){
-  BtnFacebook.addEventListener('click',partagerSurFacebook())
+  BtnFacebook.addEventListener('click',partagerSurFacebook)
 }
 
 if(BtnInstagram){
-  BtnInstagram.addEventListener('click', ouvrirInstagram())
+  BtnInstagram.addEventListener('click', ouvrirInstagram)
 }
 
 if(BtnWhatsApp){
-  BtnWhatsApp.addEventListener('click', partagerSurWhatsApp() )
+  BtnWhatsApp.addEventListener('click', partagerSurWhatsApp)
 }
 
 if(BtnTiktok){
-   BtnTiktok.addEventListener('click', ouvrirTikTok())
+   BtnTiktok.addEventListener('click', ouvrirTikTok)
 }
-
-// if(BtnMail){
-//   BtnMail.addEventListener('click', partagerParGmail())
-// }
 
 })
 
