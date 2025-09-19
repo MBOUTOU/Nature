@@ -247,20 +247,21 @@ animation: swiper 5s linear infinite;
    background-color: rgba(14, 28, 60, 0.05); 
    padding: 50px;
    border-radius: 10px;
+   position: relative;
 }
 
 .card{
    opacity: 0;
    transform: translateY(20px);
    display: none;
-   transition: transform 0.3s ease-in-out,
+   transition: transform 0.3s ease-in-out, height 1s ease,
    opacity 0.3s ease-in-out;
-   overflow: hidden;
-   max-height: max-content;
+   pointer-events: none;
 }
 
 .card.active{
    opacity: 1;
+   pointer-events: auto;
    display: block;
 }
 
@@ -710,7 +711,7 @@ font-weight: 500;
 
 /*la partie des elements de partage  */
 .card-partage-and-like{
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: unset;
