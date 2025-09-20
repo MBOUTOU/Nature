@@ -10,7 +10,8 @@
    <meta propety="og:image:width" content="800">
    <meta propety="og:image:height" content="500">
    <meta propety="og:url" content="https://github.com/MBOUTOU/Nature/blob/master/pages/produit1.html">
-
+   <!-- la partie du lien de swiper  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <!-- la partie dun logo -->
   <link rel="websit icon" type="jpg" href="/logo/shop (1).jpg">
   <!-- la partie des icone des fonts awesome -->
@@ -81,7 +82,7 @@
        </div>
     </div>
 <!-- LA partie de le sections des informations du produit -->
-    <section class="produit-information">
+  <section class="produit-information">
       <div class="filtrage-element">
         <button class="Donne active" data-name="description">Description</button>
         <button class="Donne" data-name="information">Information</button>
@@ -91,15 +92,15 @@
         <div class="card active information" data-name="description">
           <div class="card-contente">
             <h3>les biens faits</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eligendi natus at architecto ut quisquam nostrum a molestiae illo .</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eligendi natus at architecto ut quisquam nostrum a molestiae illo Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eligendi .</p>
           </div>
            <div class="card-contente">
             <h3>les effest secondaires</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eligendi natus at architecto ut quisquam nostrum a molestiae illo .</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eligendi natus at architecto ut quisquam nostrum a molestiae illo Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eligendi .</p>
           </div>
            <div class="card-contente">
             <h3>la posologie</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eligendi natus at architecto ut quisquam nostrum a molestiae illo .</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta eligendi natus at architecto ut quisquam nostrum a molestiae illo Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eligendi .</p>
           </div>
         </div>
          <div class="card description" data-name="information">
@@ -166,8 +167,100 @@
             </div>
         </div>
       </div>
-    </section>
-
+  </section>
+  <!-- la section swiper de mes images -->
+  <section class="image_similaire">
+     <div class="parent-element">
+       <div class="title-image-similaire">
+        <h2>Image <span>similaire</span></h2>
+    </div>
+     <div class="swaper swiper">
+        <div class="card-list-swaper swiper-wrapper">
+            <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit-huile (5).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>
+            <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit-huile (7).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>
+            <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit (12).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>
+               <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit-huile (6).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>  
+             <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit (9).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>
+               <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit (8).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>
+               <div class="swap swiper-slide">
+                    <a href="#">
+                     <div class="box-img">
+                        <img src="../image/huile/produit (10).jpeg" alt="">
+                     </div>
+                     <div class="box-flottante">
+                        <h4>Name Produit</h4>
+                        <p>3000 fr</p>
+                     </div>
+                    </a>
+            </div>
+        </div>
+            <div class="swiper-pagination"></div>
+             <!-- If we need navigation buttons -->
+             <div class="swiper-button-prev"></div>
+             <div class="swiper-button-next"></div>
+        </div>
+     </div>
+  </section>
 
 
 
@@ -235,7 +328,7 @@
     </div>
   </footer> -->
 
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   <script src="../script/produit.js"></script>
 </body>
