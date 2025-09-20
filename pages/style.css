@@ -960,27 +960,26 @@ font-weight: 500;
   padding: 20px 10px;
 }
 
-.texting-categories h2 {
-    font-weight: bold;
-    color: black;
-    font-size: 30px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.texting-categories h2 span{
-    font-weight: bold;
-    color: green;
-    font-size: 30px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
 /* la partie swaper */
 .swaper{
   padding: 30px 10px;
+}
+
+.title-image-similaire h2{
+    font-size: 40px;
+    padding: 10px 13px;
+}
+
+.title-image-similaire h2::before {
+   content: "";
+   position: absolute;
+   height: 100px;
+   width: 280px;
+   background-image: url(../logo/ligne.png);
+   background-size: cover;
+   background-position: center;
+   bottom: -60px;
+   left: 15px;
 }
 
 .swaper :where(.swiper-button-next, .swiper-button-prev){
@@ -1154,36 +1153,26 @@ align-items: center;
 
 /*  image similaire*/
 
-.texting-categories h2{
-    font-weight: bold;
-    color: green;
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+
+.title-image-similaire h2{
+    font-size: 30px;
 }
 
-.texting-categories h2 span{
-    font-weight: bold;
-    color: green;
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+.title-image-similaire h2 span{
+    font-size: 30px;
 }
 
-.texte-commentaire h2::before {
+.title-image-similaire h2::before {
    content: "";
    position: absolute;
-   height: 70px;
-   width: 170px;
-   background-image: url(logo/ligne.png);
+   height: 100px;
+   width: 280px;
+   background-image: url(../logo/ligne.png);
    background-size: cover;
    background-position: center;
-   bottom: -75px;
-   left: -10px;
+   bottom: -60px;
+   left: 15px;
 }
-
 
 
 
