@@ -963,7 +963,7 @@ font-weight: 500;
 .texting-categories h2 {
     font-weight: bold;
     color: black;
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -972,7 +972,7 @@ font-weight: 500;
 .texting-categories h2 span{
     font-weight: bold;
     color: green;
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -1175,12 +1175,12 @@ align-items: center;
 .texte-commentaire h2::before {
    content: "";
    position: absolute;
-   height: 80px;
-   width: 180px;
+   height: 70px;
+   width: 170px;
    background-image: url(logo/ligne.png);
    background-size: cover;
    background-position: center;
-   bottom: -70px;
+   bottom: -75px;
    left: -10px;
 }
 
